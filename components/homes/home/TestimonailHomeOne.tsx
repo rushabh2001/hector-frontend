@@ -13,7 +13,7 @@ const setting = {
     slidesToShow: 3, 
     slidesToScroll: 1, 
     centerMode: true, 
-    centerPadding: '0', 
+    centerPadding: '160px',
    responsive: [ 
      { 
        breakpoint: 1200, 
@@ -84,6 +84,10 @@ const TestimonailHomeOne = ({style} : any) => {
                             </div>
                         </div>
                     </div>
+                  </div>
+              
+                  <div className="container-fluid">
+                 
                        <div className="row activ-testimonai wow fadeInUp  slick-initialized slick-slider animated">
                             <button onClick={handlePrevClick} type="button" className="slick-prev slick-arrow">
                                 <i className="fas fa-arrow-left"></i>
@@ -118,7 +122,6 @@ const TestimonailHomeOne = ({style} : any) => {
                                 )}                     
                             </Slider> 
                        </div>
-
 
                 </div>
             </section>

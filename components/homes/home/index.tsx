@@ -12,6 +12,7 @@ import FooterOne from "../../layout/footers/FooterOne";
 import HeroHomeTwo from "../home-2/HeroHomeTwo";
 import AboutUs from "./AboutUs";
 import FeaturesTabs from "./FeaturesTabs";
+import ReportsHomeOne from "./ReportsHomeOne";
 
 const HomeOne = () => {
   return (
@@ -22,12 +23,13 @@ const HomeOne = () => {
         <HeroHomeTwo />
         <BrandHomeOne />
         <AboutUs />
-        <FeaturesTabs style={true} />
-        <DomainSearch />
-        <ServicesHomeOne />
         <PricingHomeOne />
-        <FAQHomeOne />
-        <ChoseAreaHomeOne />
+        {/* <FeaturesTabs style={true} /> */}
+        {/* <DomainSearch /> */}
+        {/* <ReportsHomeOne /> */}
+        {/* <ServicesHomeOne /> */}
+        {/* <FAQHomeOne /> */}
+        {/* <ChoseAreaHomeOne /> */}
         <TestimonailHomeOne />
         <NewsFeedHomeOne />
       </main>

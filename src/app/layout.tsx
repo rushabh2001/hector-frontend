@@ -6,6 +6,8 @@ import { animationCreate } from "../../components/utils/utils";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
+  // require("../../js/script.js");
+  
 }
 
 export default function RootLayout({

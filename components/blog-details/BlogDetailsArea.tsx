@@ -126,7 +126,7 @@ const BlogDetailsArea = () => {
                               </div>
                               <div className="col-xl-2 col-lg-2 col-md-2 ">
                                  <div className="bakix-filter text-left text-md-center mb-30">
-                                    <a href="#"><img src="assets/img/icon/filter.png" alt="theme-pure" /></a>
+                                    <a href="#"><img src="assets/img/icon/filter.png" alt="hector-ai" /></a>
                                  </div>
                               </div>
                               <div className="col-xl-5 col-lg-5 col-md-5">
@@ -139,7 +139,7 @@ const BlogDetailsArea = () => {
                         </div>
                         <div className="author mt-80 mb-40">
                            <div className="author-img text-center">
-                              <img src="assets/img/blog/details/author.png" alt="theme-pure" />
+                              <img src="assets/img/blog/details/author.png" alt="hector-ai" />
                            </div>
                            <div className="author-text text-center">
                               <h3>MD. Salim Rana</h3>
@@ -171,10 +171,10 @@ const BlogDetailsArea = () => {
 
                   <div className="col-lg-4">
                         <SearchBox /> 
-                        <AboutMe  /> 
-                        <PopularNewsFeeds /> 
+                        {/* <AboutMe  />  */}
                         <CategoriesArea /> 
-                        <div className="widget mb-40">
+                        <PopularNewsFeeds /> 
+                        {/* <div className="widget mb-40">
                             <div className="widget-title-box mb-30">
                             <span className="animate-border"></span>
                             <h3 className="widget-title">Social Profile</h3>
@@ -182,27 +182,27 @@ const BlogDetailsArea = () => {
                             <div className="social-profile">
                                 <SocialLinks /> 
                             </div>
-                        </div>
-                        <div className="widget mb-40">
+                        </div> */}
+                        {/* <div className="widget mb-40">
                             <div className="widget-title-box mb-30">
                             <span className="animate-border"></span>
                             <h3 className="widget-title">Instagram Feeds</h3>
                             </div>
                             <ul id="Instafeed">
-                            <li><Link href="#"><Image src={instafed_img_1} alt="theme-pure" /></Link></li>
-                            <li><Link href="#"><Image src={instafed_img_2} alt="theme-pure" /></Link></li>
-                            <li><Link href="#"><Image src={instafed_img_3} alt="theme-pure" /></Link></li>
-                            <li><Link href="#"><Image src={instafed_img_4} alt="theme-pure" /></Link></li>
-                            <li><Link href="#"><Image src={instafed_img_5} alt="theme-pure" /></Link></li>
-                            <li><Link href="#"><Image src={instafed_img_6} alt="theme-pure" /></Link></li>
+                            <li><Link href="#"><Image src={instafed_img_1} alt="hector-ai" /></Link></li>
+                            <li><Link href="#"><Image src={instafed_img_2} alt="hector-ai" /></Link></li>
+                            <li><Link href="#"><Image src={instafed_img_3} alt="hector-ai" /></Link></li>
+                            <li><Link href="#"><Image src={instafed_img_4} alt="hector-ai" /></Link></li>
+                            <li><Link href="#"><Image src={instafed_img_5} alt="hector-ai" /></Link></li>
+                            <li><Link href="#"><Image src={instafed_img_6} alt="hector-ai" /></Link></li>
                             </ul>
-                        </div>
+                        </div> */}
                         <Tags /> 
-                        <div className="widget mb-40 p-0 b-0">
+                        {/* <div className="widget mb-40 p-0 b-0">
                             <div className="banner-widget">
-                            <Link href="#"><Image src={banner} alt="theme-pure" /></Link>
+                            <Link href="#"><Image src={banner} alt="hector-ai" /></Link>
                             </div>
-                        </div>
+                        </div> */}
                 </div>
                </div>
             </div>

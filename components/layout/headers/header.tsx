@@ -18,7 +18,7 @@ const HeaderOne = () => {
                     <div className="row">
                         <div className="col-xl-3 col-lg-3 col-md-5 d-flex align-items-lg-center">
                             <div className="logo">
-                                <Link href="/"> <Image src={Logo } alt="hectorai" /> </Link>
+                                <Link href="/"> <Image src={Logo} alt="hectorai" /> </Link>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-6 d-none d-lg-block">
@@ -50,8 +50,8 @@ const HeaderOne = () => {
                                 </div> 
                             }                            
                             <div className="header-btn d-none d-md-block">
-                                <a className="btn mr-3" href="#"><i className="far fa-key"></i> Sign In</a>
-                                <a className="btn" href="#"> Book a Demo</a>
+                                <a className="btn btn-2 btn-solid mr-3" href="#"><i className="far fa-key"></i> Sign In</a>
+                                <a className="btn btn-2 btn-solid" href="#"> Book a Demo</a>
                             </div>
                         </div>
                         <div className="col-12">

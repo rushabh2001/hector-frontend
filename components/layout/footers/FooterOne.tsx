@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import SocialLinks from '../../common/social-links';
 import Image from 'next/image';
-import footer_logo from "../../../public/assets/img/logo/logo.png";
+import footer_logo from "../../../public/assets/img/hector/hector-logo-white.svg";
 
 interface footer_links_type {
     id: number;
@@ -69,12 +69,12 @@ const footer_content: footer_content_type ={
     title: "Sign Up For Web Hosting Today!",
     price_title: "Starting At Only",
     price: "2.75",
-    info_us: "Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt Lorem ipsum  ut labore et dolore magna.",
-    address: "12/A, Hamilton City Way, Newyork, US",
-    mail :"info@exampleweb.com",
+    info_us: "The Most Powerful Platform for Amazon & Flipkart Ads Optimisation",
+    address: "B30/1701, Eden Woods CHS Ltd., Shastri Ngr, Nr. Lokhandwala,Andheri ( W ), Mumbai, Mumbai City, Maharashtra, India, 400053",
+    mail :"support@hectorai.live",
     phone: "+8987 5675 754 6",
-    website: "www.webexample.com",
-    footer_info: "The promotional price is for the first term only and renews.30-Day Money-Back Guarantee does not extend to domain names.",    
+    website: "https://hectorai.live/",
+    footer_info: "© Copyright © 2024 hector. All rights reserved.",    
 
 }
 
@@ -86,7 +86,7 @@ const FooterOne = () => {
             <footer>
                 <section className="footer-area pt-110 pb-90 bg-footer" style={{backgroundImage: `url(/assets/img/bg/footer-bg.jpg)`}}>
                     <div className="container">
-                        <div className="row d-flex justify-content-start justify-content-md-between align-items-center">
+                        {/* <div className="row d-flex justify-content-start justify-content-md-between align-items-center">
                             <div className="col-xl-6 col-lg-6">
                                 <div className="footer-sing-up mb-30">
                                     <h5>{sub_title}</h5>
@@ -105,7 +105,7 @@ const FooterOne = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="footer-border"></div>
+                        <div className="footer-border"></div> */}
                         <div className="row d-flex justify-content-between">
                             <div className="col-xl-4 col-lg-4 mb-30">
                                 <div className="footer-bottom-area">
@@ -117,7 +117,7 @@ const FooterOne = () => {
                                         <ul className="adress">
                                             <li><i className="fa fa-map-marker-alt"></i> <span>{address}</span></li>
                                             <li><i className="fa fa-envelope"></i> <span>{mail}</span></li>
-                                            <li><i className="fa fa-phone"></i> <span>{phone}</span></li>
+                                            {/* <li><i className="fa fa-phone"></i> <span>{phone}</span></li> */}
                                             <li><i className="fa fa-globe"> </i> <span>{website}</span></li>
                                         </ul>
                                     </div>
@@ -153,11 +153,11 @@ const FooterOne = () => {
                                             <p>{footer_info}</p>
                                         </div>
                                     </div>
-                                    <div className="col-xl-4">
+                                    {/* <div className="col-xl-4">
                                         <div className="footer-orange-btn text-left text-xl-right">
                                             <Link href="#" className="btn"><i className="fa fa-users"></i> Reffer A Friend!</Link>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
