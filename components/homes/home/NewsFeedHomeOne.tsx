@@ -11,7 +11,7 @@ const NewsFeedHomeOne = () => {
                     <div className="row ">
                         <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                             <div className="section-title text-center mb-70">
-                                <h2>News Feeds</h2>
+                                <h2>Latest Articles</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
@@ -22,12 +22,12 @@ const NewsFeedHomeOne = () => {
                             <div key={i} className="col-xl-4 col-lg-4 col-md-6">
                                 <div className="latest-feed mb-45 wow fadeInUp animated" data-wow-delay="0.3s">
                                     <div className="news-feed-img">
-                                        <Link href="#"><Image src={item.news_thumb} alt="theme-pure" /></Link>
+                                        <Link href="#"><Image src={item.news_thumb} alt="hector-ai" /></Link>
                                     </div>
                                     <div className="news-feed-info">
                                         <div className="news-feed-mata">
                                             <ul>
-                                                <li><Image src={item.avatar} alt="theme-pure" /> <span><a href="#">{item.name}</a></span></li>
+                                                <li><Image src={item.avatar} alt="hector-ai" /> <span><a href="#">{item.name}</a></span></li>
                                                 <li><span><i className="fas fa-calendar-week"></i> {item.date}</span></li>
                                             </ul>
                                         </div>
@@ -40,13 +40,13 @@ const NewsFeedHomeOne = () => {
                             </div>   
                         )} 
                     </div>
-                    <div className="row mt-60">
+                    {/* <div className="row mt-60">
                         <div className="col-md-12">
                             <div className="news-feed-bottom-img">
-                                <Image src={line_img} alt="theme-pure" />
+                                <Image src={line_img} alt="hector-ai" />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </>

@@ -4,8 +4,8 @@ import React, { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 // brand data images 
 import brand_1 from "../../../public/assets/img/hector/noise-logo.png";
-import brand_2 from "../../../public/assets/img/hector/download.png";
-import brand_3 from "../../../public/assets/img/hector/bodywise-logo.png";
+import brand_2 from "../../../public/assets/img/hector/manmatters-logo.webp";
+import brand_3 from "../../../public/assets/img/hector/bodywise_logo.png";
 // brand data type
 interface brand_images_type {
     img: StaticImageData;

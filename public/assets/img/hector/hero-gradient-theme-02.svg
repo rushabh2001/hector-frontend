@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1990.4 832">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient);
+        opacity: .57;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" width="1990.4" height="832"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx=".44796" cy="928.92256" fx=".44796" fy="928.92256" r=".81367" gradientTransform="translate(-131531.96887 -3664.36579) rotate(91.52787) scale(437.65329 -141.93432) skewX(.04931)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e80089" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx=".18838" cy="930.29564" fx=".18838" fy="930.29564" r=".91599" gradientTransform="translate(-496431.36426 371) rotate(90) scale(431 -535.33301)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5932ea" stop-opacity=".21"/>
+      <stop offset=".21392" stop-color="#7e60ee" stop-opacity=".16258"/>
+      <stop offset=".59011" stop-color="#e2dbfb" stop-opacity=".03642"/>
+      <stop offset=".68487" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="cls-1">
+    <g>
+      <rect class="cls-4" x="-22.4" y="59.55452" width="531" height="693.24548"/>
+      <rect class="cls-2" x="1202.8" y="57.4" width="767.6" height="789.58377"/>
+    </g>
+  </g>
+</svg>

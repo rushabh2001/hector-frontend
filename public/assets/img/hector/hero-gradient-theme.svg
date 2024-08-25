@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1714 1292">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient);
+        opacity: .57;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" x="160" y="395" width="1280" height="832"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="160.19666" cy="1324.00788" fx="160.19666" fy="1324.00788" r="1" gradientTransform="translate(-214762.8025 -82778.40834) rotate(91.6021) scale(482.874 -164.19954)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e80089" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="160.34016" cy="1324" fx="160.34016" fy="1324" r=".99911" gradientTransform="translate(-419321.76428 -44715.26254) rotate(90) scale(281.341 -317.66599)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1aac06" stop-opacity=".11"/>
+      <stop offset="1" stop-color="#1aac06" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="160.22042" cy="1324" fx="160.22042" fy="1324" r="1" gradientTransform="translate(-707727.90234 -68194) rotate(90) scale(431 -535.33301)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5932ea" stop-opacity=".21"/>
+      <stop offset=".21392" stop-color="#7e60ee" stop-opacity=".16258"/>
+      <stop offset=".59011" stop-color="#e2dbfb" stop-opacity=".03642"/>
+      <stop offset=".68487" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="cls-1">
+    <g>
+      <rect class="cls-5" y="167" width="755" height="940"/>
+      <rect class="cls-2" x="822" width="892" height="790"/>
+      <rect class="cls-4" x="634" y="430" width="838" height="862"/>
+    </g>
+  </g>
+</svg>

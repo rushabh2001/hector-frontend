@@ -162,7 +162,7 @@ const PricingHomeOne = () => {
                     <div className="row ">
                         <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                             <div className="section-title text-center mb-70">
-                                <h2>What you'll get</h2>
+                                <h2>Features & Power Ups</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>

@@ -315,7 +315,7 @@ label {
 }
 /* scrollUp */
 #scrollUp {
-	background: #5932ea;
+	background: #e80089;
 	height: 60px;
 	width: 60px;
 	right: 55px;
@@ -1206,7 +1206,7 @@ span.price-colors {
 .testimonail-titles span {
 	float: right;
 	display: inline-block;
-	color: #5932ea;
+	color: #000;
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -1223,7 +1223,12 @@ span.price-colors {
 	padding:0;
 }
 .testimonail-titles {
-	margin-bottom: 34px;
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	text-align: center;
 }
 .testimonail-img {
 	display: inline-block;
@@ -1325,7 +1330,7 @@ span.price-colors {
 /* news feeds */
 .news-feed-info {
 	padding: 40px 28px;
-	padding-bottom: 0;
+	/* padding-bottom: 0; */
 }
 .news-feed-mata ul li {
 	display: inline-block;
@@ -1348,6 +1353,9 @@ span.price-colors {
 }
 .news-feed-img img {
 	max-width: 100%;
+	width: 100%;
+	object-fit: cover;
+	height: 250px;
 }
 .news-feed-img {
 	overflow: hidden;
@@ -2205,12 +2213,17 @@ ul.cat li a:hover {
 	padding-top: 10px;
 }
 .footer-bottom-area {
-	background: #000f44;
+	/* background: #000f44; */
 	padding: 50px;
+	background: rgba(255, 255, 255, 0.2);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .widgets p {
 	margin-bottom: 39px;
-	color: #9da7c9;
+	color: #ffff;
 }
 .footer-logo {
 	margin-bottom: 23px;
@@ -2220,6 +2233,7 @@ ul.adress li {
 	line-height: 34px;
 	overflow: hidden;
 	margin-bottom: 20px;
+	color: white;
 }
 ul.adress li:last-child {
 	margin-bottom: 0px;
@@ -2234,8 +2248,9 @@ ul.adress li i {
 }
 ul.adress li span {
 	display: block;
-	overflow: hidden;
-	line-height: 1;
+	overflow: visible;
+	line-height: 24px;
+	margin-top: -5px;
 }
 .widgets-titles h4{
 	color: #fff;
@@ -2252,7 +2267,7 @@ ul.adress li span {
 	top: 0;
 	left: 0;
 	content: "";
-	background: #3400bd;
+	background: #e80089;
 }
 .footer-line-img {
 	margin-bottom: 22px;
@@ -2268,7 +2283,7 @@ ul.adress li span {
 	margin-bottom: 20px;
 }
 .footer-social {
-	background: #3200ca;
+	background: #e80089;
 }
 .footer-social {
 	padding: 26px;
@@ -2289,6 +2304,8 @@ ul.adress li span {
 .footer-text p {
 	padding-top: 18px;
 	padding-right: 37px;
+	padding-left: 70px;
+	color: white;
 }
 .footer-orange-btn a {
 	background: #f07d34;
@@ -2338,6 +2355,7 @@ ul.adress li span {
 }
 .footer-info .widgets p {
 	margin-bottom: 30px;
+	color: white;
 }
 .footer-default .widgets-titles h4 {
 	padding-top: 0;
@@ -3207,6 +3225,7 @@ p.privacy-color {
 .pricing-title h3 {
     font-size: 18px;
 	margin-top: 20px;
+	font-weight: 700;
 }
 
 .price-wrapper.active .price-btn {
@@ -3778,3 +3797,13 @@ a{
 	height: 1170px;
 	background-repeat: no-repeat;
   }
+
+  .latest-feed {
+    box-shadow: 0px 0px 11px 10px #00000008;
+}
+
+.gradient-background {
+	background-image: url("../img/hector/hero-gradient-theme-01.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}

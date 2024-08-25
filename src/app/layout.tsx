@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Piohost  Next js Template</title>
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <title>Hector AI</title>
+        <link rel="icon" href="../../assets/img/hector/favicon.ico" type="image/png" />
         <link
           href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Rubik:400,500,700"
           rel="stylesheet" />

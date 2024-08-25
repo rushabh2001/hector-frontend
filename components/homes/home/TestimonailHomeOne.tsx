@@ -52,7 +52,7 @@ interface testi_content_type {
   sm_des: string;
 }
 const testi_content: testi_content_type = {
-  title: "Testimonials",
+  title: "Our Testimonies",
   sm_des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 }
 

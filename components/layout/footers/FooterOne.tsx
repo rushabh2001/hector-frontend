@@ -15,39 +15,39 @@ interface footer_links_type {
 const footer_links: footer_links_type[] = [
     {
         id: 1,
-        title: "Our Products",
+        title: "Quick Links",
         links: [
-           { title: "Shared", link: "#"},
-           { title: "hosting", link: "#"},
-           { title: "WordPress", link: "#"},
-           { title: "VPS", link: "#"},
-           { title: "hosting", link: "#"},
-           { title: "Dedicated", link: "#"},
+           { title: "Home", link: "#"},
+           { title: "About Us", link: "#"},
+           { title: "Features", link: "#"},
+           { title: "Trusted Partners", link: "#"},
+           { title: "Blogs", link: "#"},
+           { title: "Contact Us", link: "#"},
         ]
     },
     {
         id: 2,
-        title: "Get Links",
+        title: "Features",
         links: [
-           { title: "About", link: "/about"},
-           { title: "hosting", link: "/hosting"},
-           { title: "faq", link: "/faq"},
-           { title: "News", link: "/blog"},
-           { title: "News Details", link: "/blog-details"},
-           { title: "Contact", link: "/contact"},
-        ]
+            { title: "Home", link: "#"},
+            { title: "About Us", link: "#"},
+            { title: "Features", link: "#"},
+            { title: "Trusted Partners", link: "#"},
+            { title: "Blogs", link: "#"},
+            { title: "Contact Us", link: "#"},
+         ]
     },
     {
         id: 3,
-        title: "Our Company",
+        title: "Get in Touch",
         links: [
-           { title: "Chat", link: "#"},
-           { title: "Tickets", link: "#"},
-           { title: "Knowledge", link: "#"},
-           { title: "base", link: "#"},
-           { title: "System", link: "#"},
-           { title: "Marketing", link: "#"},
-        ]
+            { title: "Home", link: "#"},
+            { title: "About Us", link: "#"},
+            { title: "Features", link: "#"},
+            { title: "Trusted Partners", link: "#"},
+            { title: "Blogs", link: "#"},
+            { title: "Contact Us", link: "#"},
+         ]
     }
 ]
 // footer content type
@@ -74,7 +74,7 @@ const footer_content: footer_content_type ={
     mail :"support@hectorai.live",
     phone: "+8987 5675 754 6",
     website: "https://hectorai.live/",
-    footer_info: "© Copyright © 2024 hector. All rights reserved.",    
+    footer_info: "Copyright © 2024 HectorAI. All rights reserved.",    
 
 }
 
@@ -84,7 +84,7 @@ const FooterOne = () => {
     return (
         <>
             <footer>
-                <section className="footer-area pt-110 pb-90 bg-footer" style={{backgroundImage: `url(/assets/img/bg/footer-bg.jpg)`}}>
+                <section className="footer-area pt-110 pb-90 bg-footer" style={{backgroundImage: `url(/assets/img/hector/footer-bg-theme.jpg)`}}>
                     <div className="container">
                         {/* <div className="row d-flex justify-content-start justify-content-md-between align-items-center">
                             <div className="col-xl-6 col-lg-6">

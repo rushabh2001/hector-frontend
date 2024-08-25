@@ -2,16 +2,16 @@ import Link from "next/link";
 
 
 const social_links = [
-  // {
-  //   link: "https://www.facebook.com/themepure.net",
-  //   target: "_blank",
-  //   icon: "fab fa-facebook-f", 
-  // },
-  // {
-  //   link: "https://twitter.com/themepure_net",
-  //   target: "_blank",
-  //   icon: "fab fa-twitter", 
-  // },  
+  {
+    link: "https://www.facebook.com/themepure.net",
+    target: "_blank",
+    icon: "fab fa-facebook-f", 
+  },
+  {
+    link: "https://twitter.com/themepure_net",
+    target: "_blank",
+    icon: "fab fa-twitter", 
+  },  
   // {
   //   link: "https://www.behance.com",
   //   target: "_blank",
@@ -22,11 +22,11 @@ const social_links = [
     target: "_blank",
     icon: "fab fa-linkedin-in", 
   }, 
-  // {
-  //   link: "https://www.youtube.com/@themepure",
-  //   target: "_blank",
-  //   icon: "fab fa-youtube", 
-  // },
+  {
+    link: "https://www.youtube.com/@themepure",
+    target: "_blank",
+    icon: "fab fa-youtube", 
+  },
 ];
 
 const SocialLinks = () => {
