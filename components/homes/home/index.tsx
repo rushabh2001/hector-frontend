@@ -14,10 +14,14 @@ import AboutUs from "./AboutUs";
 import FeaturesTabs from "./FeaturesTabs";
 import ReportsHomeOne from "./ReportsHomeOne";
 
-const HomeOne = () => {
+interface Props{
+  name:string
+}
+
+const HomeOne: React.FC<Props> = ({name}) => {
   return (
-    <>
-      <HeaderOne />
+    <div className="tempalte-home">
+      <HeaderOne name={"home"} />
       <main>
         {/* <HeroHomeOne /> */}
         <HeroHomeTwo />
@@ -36,7 +40,7 @@ const HomeOne = () => {
         <NewsFeedHomeOne />
         </main>
       <FooterOne />
-    </>
+    </div>
   );
 };
 

@@ -351,7 +351,7 @@ label {
 	position: relative;
 }
 .main-menu ul li a {
-	color: #000;
+	color: #fff;
 	padding: 20px 0;
 	display: block;
 	font-size: 17px;
@@ -3854,4 +3854,8 @@ a{
 
 .colored-text {
     color: #e80089 !important;
+}
+
+.tempalte-home .main-menu ul li a {
+	color: #000;
 }

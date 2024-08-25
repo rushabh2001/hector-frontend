@@ -5,9 +5,14 @@ import { useState } from 'react';
 import SlideBar from './slide-bar';
 import MobileMenus from './mobile-menus';
 import Logo from "../../../public/assets/img/hector/hector-logo.svg";
+import Logo_dark from "../../../public/assets/img/hector/hector-logo-white.svg";
 import Image from 'next/image';
 
-const HeaderOne = () => { 
+interface IHeaderProps{
+    name?:string;
+}
+
+const HeaderOne = ({name}:IHeaderProps) => { 
     const [sidebarOppen, setSidebarOppen] = useState(false)
     const [searchOppen, setSearchOppen] = useState(false)
     return (
@@ -18,7 +23,13 @@ const HeaderOne = () => {
                     <div className="row">
                         <div className="col-xl-2 col-lg-2 col-md-5 d-flex align-items-lg-center">
                             <div className="logo">
-                                <Link href="/"> <Image src={Logo} alt="hectorai" /> </Link>
+                                <Link href="/"> 
+                                {name == "home" ? 
+                                    <Image src={Logo} alt="hectorai" /> 
+                                :
+                                    <Image src={Logo_dark} alt="hectorai" /> 
+                                }
+                                </Link>
                             </div>
                         </div>
                         <div className="col-xl-7 col-lg-7 d-none d-lg-block">
