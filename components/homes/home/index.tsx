@@ -23,16 +23,18 @@ const HomeOne = () => {
         <HeroHomeTwo />
         <BrandHomeOne />
         <AboutUs />
+    
         <PricingHomeOne />
+        <ChoseAreaHomeOne />
         {/* <FeaturesTabs style={true} /> */}
         {/* <DomainSearch /> */}
         {/* <ReportsHomeOne /> */}
         {/* <ServicesHomeOne /> */}
-        {/* <FAQHomeOne /> */}
-        {/* <ChoseAreaHomeOne /> */}
+        
         <TestimonailHomeOne />
+        <FAQHomeOne />
         <NewsFeedHomeOne />
-      </main>
+        </main>
       <FooterOne />
     </>
   );

@@ -7,7 +7,7 @@ const BookADemo = ({style}: any) => {
                 <div className={`${style && "container"}`}>
                     <div className={`${style && "domain-box"}`}>
                         <div className="row">
-                            <div className="col-xl-10">
+                            <div className="col-xl-12">
                                 <div className="newsletter-field">
                                     <div className="position-relative">
                                         <form>

@@ -6,7 +6,7 @@ import news_data from "../../data/news-data";
 const NewsFeedHomeOne = () => {
     return (
         <>
-            <section className="news-feed-area pt-115 pb-115">
+            <section className="news-feed-area gray-bg pt-115 pb-115">
                 <div className="container">
                     <div className="row ">
                         <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">

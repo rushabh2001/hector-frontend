@@ -42,20 +42,19 @@ interface accordion_data_type {
 const FAQHomeOne = () => {
     return (
         <>
-            <section className="faq-area grad-bg pt-120 pb-90">
+            <section className="faq-area pt-90 pb-90">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-6">
+                        <div className="col-xl-6 align-items-center d-flex">
                             <div className="faq-img mb-30">
-                                <img className="bounce-animate" src="/assets/img/bg/illustration.png" alt="theme-pure" />
+                                <img className="bounce-animate" src="/assets/img/hector/Questions_re_1fy7 copy.png" alt="theme-pure" />
                             </div>
                         </div>
                         <div className="col-xl-6 ">
                             <div className="faq-wrapper mb-30">
-                                <div className="section-title section-title-white mb-70">
-                                    <span>Faq</span>
-                                    <h3>Get Every Single Answer
-                                    From Here.</h3>
+                                <div className="section-title mb-70">
+                                    <h5>Frequently Asked Question</h5>
+                                    <h3>Get Every Single Answer</h3>
                                     <h4>We're here to help. Get in touch and we'll get back to you
                                     as soon as we can.</h4>
                                 </div>

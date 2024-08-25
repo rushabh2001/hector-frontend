@@ -16,13 +16,13 @@ const HeaderOne = () => {
             <div className={`header-area header-transparent header-space pt-45 pb-45`}>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-xl-3 col-lg-3 col-md-5 d-flex align-items-lg-center">
+                        <div className="col-xl-2 col-lg-2 col-md-5 d-flex align-items-lg-center">
                             <div className="logo">
                                 <Link href="/"> <Image src={Logo} alt="hectorai" /> </Link>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 d-none d-lg-block">
-                            <div className="main-menu text-center">
+                        <div className="col-xl-7 col-lg-7 d-none d-lg-block">
+                            <div className="main-menu text-right">
                                 <nav id="mobile-menu">
                                     <NavMenu />
                                 </nav>
