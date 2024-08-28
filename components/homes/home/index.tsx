@@ -18,9 +18,9 @@ interface Props{
   name:string
 }
 
-const HomeOne: React.FC<Props> = ({name}) => {
+const HomeOne: React.FC<Props> = () => {
   return (
-    <div className="tempalte-home">
+    <div className="template-home">
       <HeaderOne name={"home"} />
       <main>
         {/* <HeroHomeOne /> */}

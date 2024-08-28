@@ -36,7 +36,7 @@ const menu_data:MenuItem[]  = [
   {
     id: 2,
     title: "Features",
-    link: "/",
+    link: "/amazon",
     has_dropdown: false,
     // sub_menus: [
     //   { link: "/", title: "Home 01" },

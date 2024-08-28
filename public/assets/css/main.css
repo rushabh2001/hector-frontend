@@ -351,7 +351,7 @@ label {
 	position: relative;
 }
 .main-menu ul li a {
-	color: #fff;
+	color: #000;
 	padding: 20px 0;
 	display: block;
 	font-size: 17px;
@@ -1554,7 +1554,7 @@ span.price-colors {
 	margin-bottom: 20px;
 }
 .blog-title {
-	font-size: 28px;
+	font-size: 40px;
 	line-height: 1.3;
 	margin-bottom: 20px;
 }
@@ -2558,8 +2558,10 @@ a.btn.btn-subscriptin i {
 .breadcrumb-area {
 	background-position: center center;
 	background-size: cover;
-	padding-top: 300px;
-	padding-bottom: 180px;
+	padding-top: 180px;
+	padding-bottom: 80px;
+	background: rgb(6, 46, 128) !important;
+    background: linear-gradient(90deg, rgba(6, 46, 128, 1) 0%, #2a2a9f 35%, rgba(108, 3, 176, 1) 100%) !important;
 }
 .breadcrumb-text {
 	position: relative;
@@ -3856,6 +3858,353 @@ a{
     color: #e80089 !important;
 }
 
-.tempalte-home .main-menu ul li a {
+.template-home .main-menu ul li a {
 	color: #000;
+}
+
+.sidebar-form {	
+	background-color: white;
+	padding: 30px 20px 30px 20px;
+	box-shadow: 0px 8px 16px 0px rgba(200, 183, 255, 0.2);
+    border-top: 4px solid #5932ea;
+} 
+
+.sidebar-form .contract-page-form input, .sidebar-form .contract-page-form textarea {
+    background-color: #f7faff;
+	padding-right: 20px;
+	color: black;
+}
+
+.contract-btn button {
+	color: white !important;
+	outline: none !important;
+	background: #5932ea;
+	box-shadow: 0 6px 16px 0 rgba(77, 49, 180, .6);
+}
+
+.contract-page-form label i {
+    color: #e80089;
+}
+
+.conatct-post-form textarea, .conatct-post-form input {
+	color: black;
+}
+
+.contact-icon::after {
+	color: #e80089;
+}
+
+.comment-count {
+	font-size: 16px;
+	color: #adadad;
+	margin-left: 10px;
+}
+
+.blog-share-icon a {
+    color: #e80089;
+}
+
+.header-area.header-transparent {
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.blog-area .breadcrumb-menu li span, .blog-area .breadcrumb-menu li a, .blog-area .breadcrumb-menu li:before {
+	color: black;
+}
+
+.blog-area .breadcrumb-menu li:before {
+	content: ">";
+	background: none !important;
+	top: 0px;
+}
+
+
+.blog-area .breadcrumb-menu > li:first-child {
+	padding-left: 0px;
+	margin-bottom: 20px;
+} 
+
+.blog-area .breadcrumb-menu span {
+    font-size: 12px;
+}
+
+.active-page {
+	color: #5932ea !important;
+}
+
+.post-title-box {
+	background: white;
+	padding: 20px;
+}
+
+ul.post-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+ul.post-tags li {
+	background-color: #e80089;
+	padding: 2px 8px;
+	/* border-radius: 7px; */
+	/* color: white; */
+}
+
+ul.post-tags li a {
+	color: white;
+	font-size: 13px;
+}
+
+header.sticky-header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 23;
+}
+
+header.sticky-header .header-area.header-transparent {
+	padding: 10px;
+	box-shadow: 2px 2px 10px -5px;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 110px;
+}
+
+article.postbox.post .author {
+	display: none;
+}
+
+.post-comments {
+	margin-top: 40px;
+}
+
+.blog-post-tag a {
+    color: #ffffff;
+    background: #5932ea;
+	font-size: 12px;
+    padding: 7px 20px;
+}
+
+.back-blogs-btn {
+	color: #fff;
+    background: #5932ea;
+	padding: 16px 21px;
+	border-radius: 8px;
+	text-transform: capitalize;
+	box-shadow: 0 6px 16px 0 rgba(77, 49, 180, .6);
+	transition: 300ms ease all;
+}
+
+.back-blogs-btn i {
+	margin-right: 15px;
+}
+
+.back-blogs-btn:hover {
+	color: #fff;
+    box-shadow: 0 0px 0px 0 rgba(77, 49, 180, .6);
+}
+
+.faq-wrapper .faq-title {
+	font-size: 32px !important;
+}
+
+.related-title {
+	font-size: 32px !important;
+}
+
+.faq-box .accordion-header button.collapsed::before {
+	content: "\f078";
+}
+
+.faq-box .accordion-header button::before {
+    content: "\f077";
+}
+ 
+.news-feed-area button.slick-next.slick-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    position: absolute;
+    top: 48%;
+    right: -40px;
+    font-size: 18px;
+}
+
+.news-feed-area button.slick-prev.slick-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    position: absolute;
+    top: 48%;
+    left: -40px;
+    font-size: 18px;
+}
+
+.section-title h2 {
+	text-transform: capitalize;
+}
+
+.related-news {
+    background: white;
+    margin-top: 40px;
+    padding: 35px;
+}
+
+.post-meta.mb-15 a, .post-meta.mb-15 span {
+    font-size: 14px;
+    color: black;
+}
+
+.post-meta span i {
+	font-size: 18px;
+}
+
+.postbox__text .faq-box {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+article.postbox .faq_content {
+	padding: 20px 20px !important;
+}
+
+
+.related-news .news-feed-mata > ul > li:first-child, .template-home .news-feed-mata > ul > li:first-child {
+    display: none !important;
+}
+
+.footer-btn .btn {
+	background: #e80089;
+    color: white;
+}
+
+.footer-sing-up h2 {
+    font-size: 43px;
+}
+
+.hero-service-area {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.service-image-container img {
+	width: 90%;
+	object-fit: contain;
+	/* height: 200px !important; */
+	height: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.hero-section-btn a {
+	margin-top: 20px;
+}
+
+.hero-service-area .title {
+	font-size: 50px;
+}
+
+.hero-text-container p, .service-area p {
+	font-size: 16px;
+	margin-top: 10px;
+	color: black;
+}
+
+.hero-service-area p {
+	font-size: 18px;
+}
+
+.service-logo-slider .single-brand img {
+	height: 100px;
+}
+
+.column-text-left {
+	padding-left: 60px;
+}
+
+.column-text-right {
+	padding-right: 60px;
+}
+
+.service-image-container {
+    justify-content: center;
+    display: flex;
+}
+
+section.cta-section {
+    background: rgb(6, 46, 128) !important;
+    background: linear-gradient(90deg, rgba(6, 46, 128, 1) 0%, #2a2a9f 35%, rgba(108, 3, 176, 1) 100%) !important;
+}
+
+.cta-title {
+	color: white;
+	font-size: 50px;
+}
+
+.cta-desc {
+	color: #dfdfdf !important;
+	width: 80%;
+}
+
+.btn-white {
+    background-color: white;
+    border: none;
+    outline: none !important;
+    box-shadow: 0px 0px 20px 0px #dcdce959;
+}
+
+.service-logo-slider .single-brand img {
+    background: white;
+    padding: 20px;
+	border-radius: 10px;
+}
+
+section.service-logo-slider {
+	background: #e6efff;
+    padding-top: 60px;
+
+}
+
+.hero-desc {
+	color: #dfdfdf !important;
+	font-size: 16px !important;
+}
+
+.service-area .title {
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
+.icon-service-section .section-title {
+	width: 70%;
+}
+
+.bg-theme-secondary {
+	background: #f0f4ff;
+}
+
+.icon-service-section .services-content h3 {
+    font-size: 24px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.icon-service-section .services-box {
+	background-color: white;
 }

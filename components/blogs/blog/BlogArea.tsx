@@ -15,7 +15,7 @@ import instafed_img_4 from "../../../public/assets/img/blog/ins4.jpg";
 import instafed_img_5 from "../../../public/assets/img/blog/ins5.jpg";
 import instafed_img_6 from "../../../public/assets/img/blog/ins1.jpg";
 
-import banner from "../../../public/assets/img/blog/details/banner.png";
+import banner from "../../../public/assets/img/hector/1705056274457.jpeg";
 import blog_img_1 from "../../../public/assets/img/blog/b1.jpg";
 import blog_img_2 from "../../../public/assets/img/blog/b2.jpg"; 
 
@@ -26,6 +26,7 @@ import blog_slider_3 from "../../../public/assets/img/blog/b5.jpg";
 import Slider from "react-slick";
 import { useRef, useState } from "react";
 import VideoPopup from "../../modals/video-popup";
+import ContactForm from "../../blog-details/ContactForm";
 // blog content
 const blog_content =  [ 
     {
@@ -143,77 +144,36 @@ const BlogArea = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8"> 
-                            {blog_content.map((item, i)  => 
-                                <article key={i} className="postbox post format-image mb-40">
-                                    {item.just_thumb && 
-                                        <div className="postbox__thumb">
-                                            <a href="#">
-                                                <Image src={blog_img_1} alt="blog image" />
-                                            </a>
-                                        </div> 
-                                    }
-                                    {item.video &&
-                                        <div className="postbox__video">
-                                            <Image src={item.img_thumb}  alt="theme-pure" />
-                                            <button className="popup-video video-btn" 
-                                                onClick={() => setIsVideoOpen(true)}
-                                                style={{ cursor: "pointer" }}>
-                                                <i className="fas fa-play"></i>
-                                            </button> 
-                                        </div>                                  
-                                    }
-                                    {item?.slider && 
-                                        <div className="postbox__gallery mb-30 slick-slider"> 
-                                            <button type="button" className="slick-prev slick-arrow" 
-                                            onClick={handlePrev}>
-                                                    <i className="fas fa-arrow-left"></i>
-                                                </button>
-                                                <button type="button" className="slick-next slick-arrow" 
-                                                onClick={handleNext}>
-                                                    <i className="fas fa-arrow-right"></i>
-                                                </button>
-                                            <Slider {...setting} ref={sliderRef}>
-                                                {item.slider_img.map((sl_img, index) =>
-                                                    <Image key={index} src={sl_img}  alt="theme-pure" /> 
-                                                )}
-                                            </Slider> 
-                                        </div>
-                                    }
-                                    {item?.audio && 
-                                        <div className="postbox__audio embed-responsive embed-responsive-16by9 mb-30">
-                                            <iframe src={item.audioID}></iframe>
-                                        </div>
-                                    }
-                                    <div className="postbox__text p-50">
-                                        <div className="post-meta mb-15">
-                                            <span><i className="far fa-calendar-check"></i> {item.date}</span>
-                                            <span><a href="#"><i className="far fa-user"></i>{item.post_by}</a></span>
-                                            <span><a href="#"><i className="far fa-comments"></i> {item.comments} Comments</a></span>
-                                        </div>
-                                        <h3 className="blog-title">
-                                            <a href="#">{item.title}</a>
-                                        </h3>
-                                        <div className="post-text mb-20">
-                                            <p>{item.sm_des}</p>
-                                        </div>
-                                        <div className="read-more mt-30">
-                                            <a href="#" className="btn btn-2">read more</a>
-                                        </div>
-                                    </div>
-                               </article>  
-                            )} 
+                            <div className="container">
+                                <div className="row">
+                                    {blog_content.map((item, i)  => 
+                                        <div key={i} className="col-xl-6 col-lg-6 col-md-6">
+                                            <div className="latest-feed mb-45 wow fadeInUp  animated" data-wow-delay="0.3s">
+                                                <div className="news-feed-img">
+                                                    <Link href="/blog-details"><Image src={banner} alt="hector-ai" /></Link>
+                                                </div>
+                                                <div className="news-feed-info">
+                                                    <div className="news-feed-mata">
+                                                        <ul>
+                                                            {/* <li><Image src={item.avatar} alt="hector-ai" /> <span><a href="#">{item.name}</a></span></li> */}
+                                                            <li><span><i className="fas fa-calendar-week"></i> {item.date}</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="news-feed-titles">
+                                                        <h4><a href="/blog-details">{item.title}</a></h4>
+                                                        <p>{item.sm_des}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>   
 
-                            <article className="postbox post format-quote mb-40">
-                                <div className="post-text">
-                                <blockquote>
-                                    <p>This health blog from NPR takes a fairly broad look at the medical world,.</p>
-                                    <footer>- Rosalina Pong</footer>
-                                </blockquote>
+
+                                    )} 
                                 </div>
-                            </article>
+                            </div>
 
 
-                            <div className="basic-pagination basic-pagination-2 mb-40">
+                            <div className="basic-pagination basic-pagination-2 mb-4 text-center">
                                 <ul>
                                 <li><Link href="#"><i className="fas fa-angle-double-left"></i></Link></li>
                                 <li><Link href="#">01</Link></li>
@@ -226,11 +186,17 @@ const BlogArea = () => {
                         </div>
 
                         <div className="col-lg-4">
-                            <SearchBox /> 
-                            <AboutMe  /> 
-                            <PopularNewsFeeds /> 
-                            <CategoriesArea /> 
-                            <div className="widget mb-40">
+
+                            <div className="sidebar-sticky">
+                                <CategoriesArea /> 
+                                <ContactForm />
+                            {/* <PopularNewsFeeds />  */}
+                            </div>
+                            {/* <SearchBox />  */}
+                            {/* <AboutMe  />  */}
+                            {/* <PopularNewsFeeds />  */}
+                        
+                            {/*<div className="widget mb-40">
                                 <div className="widget-title-box mb-30">
                                 <span className="animate-border"></span>
                                 <h3 className="widget-title">Social Profile</h3>
@@ -258,7 +224,7 @@ const BlogArea = () => {
                                 <div className="banner-widget">
                                 <Link href="#"><Image src={banner} alt="theme-pure" /></Link>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         
                     </div>

@@ -17,18 +17,28 @@ import instafed_img_6 from "../../public/assets/img/blog/ins1.jpg";
 import banner from "../../public/assets/img/blog/details/banner.png";
 import PostComments from "../forms/PostComments";
 import CommentsBox from "./CommentsBox";
+import ContactForm from "./ContactForm";
+import FAQBlog from "./FAQBlog";
+import RelatedNews from "./RelatedNews";
 
 
 const BlogDetailsArea = () => {
     return (
         <>
             <section className="blog-area gray-bg pt-120 pb-80">
-            <div className="container">
+            <div className="container mt-10">
                <div className="row">
                   <div className="col-lg-8">
-                     <article className="postbox post format-image mb-40">
+                     <article className="postbox post format-image">
+                        <div className="post-title-box">
+                           <ul className="breadcrumb-menu"><li><a href="/">Home</a></li><li><a href="/"><span>Blogs</span></a></li><li><a href="/"><span className="active-page">Amazon Product Listing Images</span></a></li></ul>
+                           <ul className="post-tags"><li><a href="/">General</a></li><li><a href="/">Amazon</a></li><li><a href="/">New</a></li></ul>
+                           <h3 className="blog-title">
+                              If you find yourself constantly bookmarking health sections on news
+                           </h3>
+                        </div>
                         <div className="postbox__thumb">
-                           <img src="assets/img/blog/b1.jpg" alt="blog image" />
+                           <img src="assets/img/hector/1705056274457.jpeg" alt="blog image" />
                         </div>
                         <div className="postbox__text potsbox_single">
                            <div className="post-meta mb-15">
@@ -36,9 +46,7 @@ const BlogDetailsArea = () => {
                               <span><a href="#"><i className="far fa-user"></i> Diboli B. Joly</a></span>
                               <span><a href="#"><i className="far fa-comments"></i> 23 Comments</a></span>
                            </div>
-                           <h3 className="blog-title">
-                              If you find yourself constantly bookmarking health sections on news.
-                           </h3>
+                          
                            <div className="post-text mb-20">
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                  incididunt ut labore et dolore magna
@@ -98,14 +106,22 @@ const BlogDetailsArea = () => {
                                  </p>
                               </div>
                            </div>
+
+                           <div className="navigation-border pt-50 mt-40"></div>
+
+                           <FAQBlog />
+
+                           <div className="navigation-border pt-50 mt-40"></div>
+
                            <div className="row mt-50">
-                              <div className="col-xl-8 col-lg-8 col-md-8 mb-15">
-                                 <div className="blog-post-tag">
+                              <div className="col-xl-8 col-lg-8 col-md-8 mb-15 d-flex align-items-center">
+                                 <a href="#" className="back-blogs-btn"><i className="far fa-arrow-left"></i>Back to Blogs</a>
+                                 {/* <div className="blog-post-tag">
                                     <span>Releted Tags</span>
                                     <a href="#">organic</a>
                                     <a href="#">Foods</a>
                                     <a href="#">tasty</a>
-                                 </div>
+                                 </div> */}
                               </div>
                               <div className="col-xl-4 col-lg-4 col-md-4 mb-15">
                                  <div className="blog-share-icon text-left text-md-right">
@@ -114,7 +130,7 @@ const BlogDetailsArea = () => {
                                  </div>
                               </div>
                            </div>
-                           <div className="row">
+                           {/* <div className="row">
                               <div className="col-12">
                                  <div className="navigation-border pt-50 mt-40"></div>
                               </div>
@@ -135,9 +151,9 @@ const BlogDetailsArea = () => {
                                     <h4><a href="#">Tips on Minimalist</a></h4>
                                  </div>
                               </div>
-                           </div>
+                           </div> */}
                         </div>
-                        <div className="author mt-80 mb-40">
+                        {/* <div className="author mt-80 mb-40">
                            <div className="author-img text-center">
                               <img src="assets/img/blog/details/author.png" alt="hector-ai" />
                            </div>
@@ -157,7 +173,11 @@ const BlogDetailsArea = () => {
                                  ea commodo consequa aute irure dolor. 
                               </p>
                            </div>
-                        </div>
+                        </div> */}
+
+                        <RelatedNews />
+
+
                         <CommentsBox /> 
                         <div className="post-comments-form">
                            <div className="post-comments-title">
@@ -170,10 +190,13 @@ const BlogDetailsArea = () => {
 
 
                   <div className="col-lg-4">
-                        <SearchBox /> 
+                        {/* <SearchBox />  */}
                         {/* <AboutMe  />  */}
-                        <CategoriesArea /> 
-                        <PopularNewsFeeds /> 
+                        {/* <CategoriesArea />  */}
+                        <div className="sidebar-sticky">
+                           <ContactForm />
+                           {/* <PopularNewsFeeds />  */}
+                        </div>
                         {/* <div className="widget mb-40">
                             <div className="widget-title-box mb-30">
                             <span className="animate-border"></span>
@@ -197,7 +220,7 @@ const BlogDetailsArea = () => {
                             <li><Link href="#"><Image src={instafed_img_6} alt="hector-ai" /></Link></li>
                             </ul>
                         </div> */}
-                        <Tags /> 
+                        {/* <Tags />  */}
                         {/* <div className="widget mb-40 p-0 b-0">
                             <div className="banner-widget">
                             <Link href="#"><Image src={banner} alt="hector-ai" /></Link>

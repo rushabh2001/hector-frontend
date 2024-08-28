@@ -26,7 +26,6 @@ const news_data: news_data_type[] = [
         avatar: avatar_1,
         name: "Tirth Mehta",
         date: "13 Aug 2023",
-    
         title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
         news_blog: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
@@ -44,7 +43,15 @@ const news_data: news_data_type[] = [
         news_thumb: news_thumb_3,
         avatar: avatar_3,
         name: "Ankush Patel",
-     
+        date: "23 Mar 2024",
+        title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+        news_blog: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        id: 4,
+        news_thumb: news_thumb_3,
+        avatar: avatar_3,
+        name: "Ankush Patel",
         date: "23 Mar 2024",
         title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
         news_blog: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

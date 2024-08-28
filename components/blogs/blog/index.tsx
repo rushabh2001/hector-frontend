@@ -9,7 +9,7 @@ const Blog = () => {
     <>
       <HeaderOne />
       <main>
-        <Breadcrumb top_title="Blog Page" title="Blog" />
+        <Breadcrumb top_title="Blogs" title="Blog" />
         <BlogArea />
       </main>
       <FooterOne />

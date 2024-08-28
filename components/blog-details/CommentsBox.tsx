@@ -56,7 +56,7 @@ const CommentsBox = () => {
         <>
             <div className="post-comments">
                 <div className="blog-coment-title mb-30">
-                    <h2>03 Comments</h2>
+                    <h2>Comment <span className="comment-count">(3 Comments)</span></h2>
                 </div>
                 <div className="latest-comments">
                     <ul>

@@ -7,6 +7,7 @@ import MobileMenus from './mobile-menus';
 import Logo from "../../../public/assets/img/hector/hector-logo.svg";
 import Logo_dark from "../../../public/assets/img/hector/hector-logo-white.svg";
 import Image from 'next/image';
+import useSticky from "../../hooks/use-sticky";
 
 interface IHeaderProps{
     name?:string;
@@ -15,20 +16,21 @@ interface IHeaderProps{
 const HeaderOne = ({name}:IHeaderProps) => { 
     const [sidebarOppen, setSidebarOppen] = useState(false)
     const [searchOppen, setSearchOppen] = useState(false)
+    const { sticky } = useSticky();
     return (
         <>
-            <header>
+            <header className={`${sticky && "sticky-header"}`}>
             <div className={`header-area header-transparent header-space pt-45 pb-45`}>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div className="col-xl-2 col-lg-2 col-md-5 d-flex align-items-lg-center">
                             <div className="logo">
                                 <Link href="/"> 
-                                {name == "home" ? 
+                                {/* {name == "home" ?  */}
                                     <Image src={Logo} alt="hectorai" /> 
-                                :
+                                {/* :
                                     <Image src={Logo_dark} alt="hectorai" /> 
-                                }
+                                } */}
                                 </Link>
                             </div>
                         </div>
@@ -39,7 +41,7 @@ const HeaderOne = ({name}:IHeaderProps) => {
                                 </nav>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-7 d-flex flex-row-reverse align-items-center justify-content-xl-end">
+                        <div className="col-xl-3 col-lg-3 col-md-7 d-flex  align-items-center justify-content-xl-end">
                             {/* <div className="bar d-none d-xl-block">
                                 <button className="info-bar" onClick={() => setSidebarOppen(true)}><i className="far fa-bars"></i></button>
                             </div>

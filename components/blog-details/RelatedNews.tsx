@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-import news_data from "../../data/news-data";
+import news_data from "../data/news-data";
 import line_img from "../../../public/assets/img/icon/line.png";
 import Slider from "react-slick";
 import { useRef } from "react";
@@ -10,7 +10,7 @@ const setting = {
     arrows: false, 
     infinite: true, 
     speed: 300, 
-    slidesToShow: 3, 
+    slidesToShow: 2, 
     slidesToScroll: 1, 
     centerMode: false, 
     // centerPadding: '160px',
@@ -47,7 +47,7 @@ const setting = {
    ]
 }
 
-const NewsFeedHomeOne = () => {
+const RelatedNews = () => {
     const sliderRef = useRef<Slider | null>(null);
 
     const handlePrevClick = () => {
@@ -64,14 +64,12 @@ const NewsFeedHomeOne = () => {
 
     return (
         <>
-            <section className="news-feed-area gray-bg pt-115 pb-115">
+            <section className="related-news news-feed-area gray-bg pt-115 pb-115">
                 <div className="container">
-                    <div className="row ">
-                        <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                            <div className="section-title text-center mb-70">
-                                <h2>Latest Blogs</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div className="row">
+                        <div className="col-xl-12 col-lg-12">
+                            <div className="section-title mb-30">
+                                <h2 className="related-title">Related Blogs</h2>
                             </div>
                         </div>
                     </div>
@@ -119,4 +117,4 @@ const NewsFeedHomeOne = () => {
     );
 };
 
-export default NewsFeedHomeOne;
+export default RelatedNews;

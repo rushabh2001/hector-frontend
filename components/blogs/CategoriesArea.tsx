@@ -6,11 +6,11 @@ interface Categories_data_type {
 }[]
 
 const Categories_data: Categories_data_type[] = [
-    {id: 1, categorie: "Lifestyle", items: 78 },
-    {id: 2, categorie: "Travel", items: 42 },
-    {id: 3, categorie: "Fashion", items: 32 },
-    {id: 4, categorie: "Music", items: 85 },
-    {id: 5, categorie: "Branding", items: 5 },
+    {id: 1, categorie: "General", items: 78 },
+    {id: 2, categorie: "Technology", items: 42 },
+    {id: 3, categorie: "Listing", items: 32 },
+    {id: 4, categorie: "Amazon", items: 85 },
+    // {id: 5, categorie: "Branding", items: 5 },
 ]
 const CategoriesArea = () => {
     return (

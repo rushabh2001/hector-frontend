@@ -65,8 +65,8 @@ interface footer_content_type {
 }
 // footer content here
 const footer_content: footer_content_type ={
-    sub_title: "Get an easy quote",
-    title: "Sign Up For Web Hosting Today!",
+    sub_title: "Get onboard easily with our tool",
+    title: "Get the Most from Your Ads — Optimize with Us!",
     price_title: "Starting At Only",
     price: "2.75",
     info_us: "The Most Powerful Platform for Amazon & Flipkart Ads Optimisation",
@@ -86,7 +86,7 @@ const FooterOne = () => {
             <footer>
                 <section className="footer-area pt-110 pb-90 bg-footer" style={{backgroundImage: `url(/assets/img/hector/footer-bg-theme.jpg)`}}>
                     <div className="container">
-                        {/* <div className="row d-flex justify-content-start justify-content-md-between align-items-center">
+                        <div className="row d-flex justify-content-start justify-content-md-between align-items-center">
                             <div className="col-xl-6 col-lg-6">
                                 <div className="footer-sing-up mb-30">
                                     <h5>{sub_title}</h5>
@@ -95,17 +95,17 @@ const FooterOne = () => {
                             </div>
                             <div className="col-xl-3 col-md-5 col-lg-3">
                                 <div className="footer-left-info mb-30">
-                                    <h5>{price_title}</h5>
-                                    <h2>${price}<span>/mo*</span></h2>
+                                    {/* <h5>{price_title}</h5>
+                                    <h2>${price}<span>/mo*</span></h2> */}
                                 </div>
                             </div>
                             <div className="col-xl-3 col-md-7 col-lg-3">
                                 <div className="footer-btn mb-30">
-                                    <Link href="#" className="btn btn-grad">Get Start Now</Link>
+                                    <Link href="#" className="btn btn-grad">Book A Demo</Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="footer-border"></div> */}
+                        <div className="footer-border"></div>
                         <div className="row d-flex justify-content-between">
                             <div className="col-xl-4 col-lg-4 mb-30">
                                 <div className="footer-bottom-area">

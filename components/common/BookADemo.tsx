@@ -12,7 +12,7 @@ const BookADemo = ({style}: any) => {
                                     <div className="position-relative">
                                         <form>
                                         {/* <form onSubmit={(e) => e.preventDefault()}> */}
-                                            <input type="text" placeholder="Enter your work email..." />
+                                            <input type="text" placeholder="Email Address" />
                                             
                                             <div className="hector-landing__contact-form__actions">
                                                 <button type="submit" className="btn btn-2 btn-solid hector-landing-btn__color-primary">BOOK A DEMO</button>
