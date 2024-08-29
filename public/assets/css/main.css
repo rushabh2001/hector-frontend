@@ -3372,7 +3372,7 @@ p.privacy-color {
 }
 /* 16.login */
 .basic-login {
-	padding: 90px;
+	padding: 40px;
 	border: 2px solid #eaedff;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

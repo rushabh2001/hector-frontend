@@ -63,7 +63,7 @@ const HeaderOne = ({name}:IHeaderProps) => {
                                 </div> 
                             }                            
                             <div className="header-btn d-none d-md-block">
-                                <a className="btn btn-2 btn-solid mr-3" href="#"><i className="far fa-key"></i> Sign In</a>
+                                <a className="btn btn-2 btn-solid mr-3" href="/login"><i className="far fa-key"></i> Sign In</a>
                                 <a className="btn btn-2 btn-solid" href="#"> Book a Demo</a>
                             </div>
                         </div>

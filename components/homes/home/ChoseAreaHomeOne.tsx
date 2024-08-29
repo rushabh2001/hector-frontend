@@ -54,7 +54,7 @@ const ChoseAreaHomeOne = () => {
                     <div className="row justify-content-center">
                         <div className="col-xl-8 col-lg-10 ">
                             <div className="section-title text-center mb-70">
-                                <h2>Streamline your <span className="colored-text">workflow</span> and drive impact</h2>
+                                <h2>Streamline Your <span className="colored-text">Workflow</span> and Drive Impact</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
