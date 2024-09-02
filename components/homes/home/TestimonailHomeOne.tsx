@@ -40,6 +40,8 @@ const setting = {
          slidesToShow: 1, 
          slidesToScroll: 1, 
          arrows: false, 
+         centerMode: false, 
+         centerPadding: '20px',
        }
  
      }
@@ -78,7 +80,7 @@ const TestimonailHomeOne = ({style} : any) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 col-lg-8">
-                            <div className="section-title section-title-white mb-70">
+                            <div className="section-title section-title-white mb-70 text-xs-center">
                                 <h2>{title}</h2>
                                 <p>{sm_des}</p>
                             </div>

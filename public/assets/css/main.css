@@ -1411,6 +1411,8 @@ span.price-colors {
 .single-brand img {
 	display: inline-block;
 }
+
+
 .single-brand {
 	text-align: center;
 }
@@ -3523,7 +3525,7 @@ a{
 	border-radius: 10px;
     padding: 16px 21px;
     color: #141414;
-    z-index: 2;
+    z-index: 1;
 	font-size: 20px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -3842,7 +3844,7 @@ a{
 }
 
 .gradient-background {
-	background-image: url("../img/hector/hero-gradient-theme-01.svg");
+	background-image: url("../img/hector/auth_bg.894220ec.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -4207,4 +4209,48 @@ section.service-logo-slider {
 
 .icon-service-section .services-box {
 	background-color: white;
+}
+
+.logo-home-section .single-brand img {
+    max-width: 270px;
+    object-fit: contain;
+    height: auto;
+    max-height: 80px;
+}
+
+.logo-home-section .single-brand {
+    margin: 0px 40px;
+}
+
+.offcanvas-header {
+    background: #5932ea;
+}
+
+.offcanvas-header .offcanvas-title, .offcanvas-header .btn-close  {
+	color: white;
+}
+
+.offcanvas-body {
+
+}
+
+/* .offcanvas-body ul {
+    display: flex;
+    gap: 20px;
+} */
+
+.offcanvas-body li {
+    padding: 10px 0px;
+}
+
+.offcanvas-body li a {
+    color: black;
+    /* padding: 10px 0px; */
+    font-size: 18px;
+}
+
+button.navbar-toggler {
+    outline: none !important;
+	box-shadow: none !important;
+	border: none;
 }

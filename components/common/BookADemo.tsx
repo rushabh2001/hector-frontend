@@ -4,10 +4,10 @@ const BookADemo = ({style}: any) => {
     return (
         <>
             <section className={`${style && "domain-search-section"}`}>
-                <div className={`${style && "container"}`}>
-                    <div className={`${style && "domain-box"}`}>
+                {/* <div className={`${style && "container"}`}> */}
+                    <div className={`${style && "domain-box"} container`}>
                         <div className="row">
-                            <div className="col-xl-12">
+                            <div className="col-xl-12 col-xs-8">
                                 <div className="newsletter-field">
                                     <div className="position-relative">
                                         <form>
@@ -52,7 +52,7 @@ const BookADemo = ({style}: any) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </section>
         </>
     );

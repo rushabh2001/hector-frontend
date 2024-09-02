@@ -23,7 +23,7 @@ const HeaderOne = ({name}:IHeaderProps) => {
             <div className={`header-area header-transparent header-space pt-45 pb-45`}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-2 col-lg-2 col-md-5 d-flex align-items-lg-center">
+                        <div className="col-xl-2 col-lg-2 col-md-5 col-xs-8 d-flex align-items-lg-center justify-content-xs-between">
                             <div className="logo">
                                 <Link href="/"> 
                                 {/* {name == "home" ?  */}
@@ -32,6 +32,11 @@ const HeaderOne = ({name}:IHeaderProps) => {
                                     <Image src={Logo_dark} alt="hectorai" /> 
                                 } */}
                                 </Link>
+                            </div>
+                            <div className="mobile-menu mean-container d-lg-none"> 
+                                <div className="mean-bar">
+                                <MobileMenus />
+                                </div>
                             </div>
                         </div>
                         <div className="col-xl-7 col-lg-7 d-none d-lg-block">
@@ -48,7 +53,7 @@ const HeaderOne = ({name}:IHeaderProps) => {
                             <div className="search d-none d-xl-block">
                                 <button className={`nav-search search-trigger ${searchOppen && "open"}`}><i className="far fa-search" onClick={() => setSearchOppen(true)}></i></button>
                             </div> */}
-                            {searchOppen && 
+                            {/* {searchOppen && 
                                 <div className={`search-wrap ${searchOppen && "d-block"}`}>
                                     <div className="search-inner">
                                         <i className={`fas fa-times search-close ${searchOppen && "open"}`} onClick={() => setSearchOppen(false)} id="search-close"></i>
@@ -61,18 +66,14 @@ const HeaderOne = ({name}:IHeaderProps) => {
                                         </div>
                                     </div>
                                 </div> 
-                            }                            
+                            }                             */}
                             <div className="header-btn d-none d-md-block">
                                 <a className="btn btn-2 btn-solid mr-3" href="/login"><i className="far fa-key"></i> Sign In</a>
                                 <a className="btn btn-2 btn-solid" href="#"> Book a Demo</a>
                             </div>
                         </div>
-                        <div className="col-12">
-                            <div className="mobile-menu mean-container d-lg-none"> 
-                                <div className="mean-bar">
-                                <MobileMenus />
-                                </div>
-                            </div>
+                        <div className=" col-xs-4">
+                           
                         </div>
                     </div>
                 </div>

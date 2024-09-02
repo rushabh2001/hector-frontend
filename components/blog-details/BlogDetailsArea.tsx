@@ -113,20 +113,22 @@ const BlogDetailsArea = () => {
 
                            <div className="navigation-border pt-50 mt-40"></div>
 
-                           <div className="row mt-50">
-                              <div className="col-xl-8 col-lg-8 col-md-8 mb-15 d-flex align-items-center">
-                                 <a href="#" className="back-blogs-btn"><i className="far fa-arrow-left"></i>Back to Blogs</a>
-                                 {/* <div className="blog-post-tag">
-                                    <span>Releted Tags</span>
-                                    <a href="#">organic</a>
-                                    <a href="#">Foods</a>
-                                    <a href="#">tasty</a>
-                                 </div> */}
-                              </div>
-                              <div className="col-xl-4 col-lg-4 col-md-4 mb-15">
-                                 <div className="blog-share-icon text-left text-md-right">
-                                    <span>Share: </span>
-                                    <SocialLinks /> 
+                           <div className="container">
+                              <div className="row mt-50">
+                                 <div className="col-xl-8 col-lg-8 col-md-8 col-xs-6 mb-15 d-flex align-items-center justify-content-xs-center">
+                                    <a href="#" className="back-blogs-btn"><i className="far fa-arrow-left"></i>Back to Blogs</a>
+                                    {/* <div className="blog-post-tag">
+                                       <span>Releted Tags</span>
+                                       <a href="#">organic</a>
+                                       <a href="#">Foods</a>
+                                       <a href="#">tasty</a>
+                                    </div> */}
+                                 </div>
+                                 <div className="col-xl-4 col-lg-4 col-md-4 col-xs-6 mb-15 mt-xs-30">
+                                    <div className="blog-share-icon text-md-right text-xs-center">
+                                       <span>Share: </span>
+                                       <SocialLinks /> 
+                                    </div>
                                  </div>
                               </div>
                            </div>
