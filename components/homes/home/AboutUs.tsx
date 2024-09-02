@@ -3,7 +3,8 @@ import Link from "next/link";
 const AboutUs = () => {
     return (
         <>
-            <section className="news-feed-area pt-105 pb-115 gradient-background">
+            <section className="news-feed-area pt-105 pb-115">
+            {/* <section className="news-feed-area pt-105 pb-115 gradient-background"> */}
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xl-7 col-lg-8">

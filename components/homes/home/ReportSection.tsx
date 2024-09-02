@@ -63,7 +63,7 @@ const setting = {
    ]
 }
 
-const FeaturesTabs = () => {
+const ReportSection = () => {
     const sliderRef = useRef<Slider | null>(null);
 
     const handlePrevClick = () => {
@@ -92,11 +92,13 @@ const FeaturesTabs = () => {
             lazyLoad: true,
             asNavFor: ".slider-nav",
             focusOnSelect: true,
-            centerMode: true, 
+            // centerMode: true, 
             // centerPadding: '60px',   
-            variableWidth: true,       
+            // variableWidth: true,       
             arrows: false, 
             infinite: false, 
+            // vertical: true,
+            // verticalSwiping: true,
             nextArrow: (
                 <div>
                   <div className="next-slick-arrow"> ⫸ </div>
@@ -110,7 +112,7 @@ const FeaturesTabs = () => {
           };
     return (
         <>
-            <div className="container service-tab-container">
+            <div className="container report-tab-container">
                 <div className="row justify-content-center">
                     <div className="col-md-9">
                         <div className="container">
@@ -388,4 +390,4 @@ const FeaturesTabs = () => {
     );
 };
 
-export default FeaturesTabs;
+export default ReportSection;

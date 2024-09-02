@@ -4360,3 +4360,108 @@ button.navbar-toggler {
     width: auto;
 }
 
+.tab-custom-container .hector-landing__features--tab-list-nav {
+	position: absolute;
+	cursor: pointer;
+}
+
+a.hector-landing__features--tab-list-nav.next-nav-btn {
+    top: 15px;
+    right: -3%;
+}
+
+a.hector-landing__features--tab-list-nav.prev-nav-btn {
+    top: 15px;
+    left: -3%;
+}
+
+.thumb-wrapper {
+    display: flex;
+	justify-content: center;
+}
+
+.header-tab {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.tab-custom-content img {
+	width: 100%;
+	height: auto;
+}
+
+.hector-landing__features--tab-content-header--title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 30px;
+	letter-spacing: 1px;
+	color: #141414;
+	margin-bottom: 40px;
+}
+
+.hector-landing__features--tab-content-header--description {
+    margin-top: 11px;
+    color: #797979;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.9px;
+}
+
+.hector-landing__features--tab-content-header--action {
+    margin-top: 24px;
+}
+
+/* .service-tab-container .slick-track {
+	grid-gap: 64.5px !important;
+	gap: 64.5px !important;
+} */
+
+.service-tab-container .slick-track {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    grid-gap: 10px;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.service-tab-container .tab-head {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 17px;
+	padding: 10px 12px;
+	color: #141414;
+	display: inline-block;
+    flex: 1 1;
+    letter-spacing: .5px;
+    text-align: center;
+    text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.service-tab-container .header-tab {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.service-tab-container .slick-active {
+	border-bottom: 3px solid #e80089;
+}
+
+.service-tab-container > .row {
+	margin-bottom: 118px;
+	padding: 60px 0px 100px;
+    margin: 0 auto 79px;
+	border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 10px 60px 0 hsla(0, 0%, 87.5%, .5);
+}
+
+.tab-custom-content {
+	margin-top: 100px;
+}
+
+.service-img {
+	padding-right: 80px;
+}
