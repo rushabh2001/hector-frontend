@@ -1,6 +1,6 @@
 import Image from "next/image";
 import hosting_bg  from "../../../public/assets/img/hector/landing-hero.14095905.png"
-import BookADemo from "../../common/BookADemo";
+import BookADemo from "../../common/BookADemoOld";
 
 
 interface hero_content_type {

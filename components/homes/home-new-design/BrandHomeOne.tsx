@@ -104,13 +104,13 @@ const BrandHomeOne = ({style} : any) => {
                   <div className="row justify-content-center">
                     <div className="col-md-12">
                       <h6 className="hector-landing__testimonials--title">TRUSTED BY</h6>
-                      <Slider {...setting} ref={sliderRef} className="brand-active">
+                      <Slider {...setting} ref={sliderRef} className="row brand-active">
                           {brand_images.map((item, i) => 
-                              // <div className="col-12">
-                                  <div key={i} className="single-brand">
+                              <div key={i} className="col-12">
+                                  <div className="single-brand">
                                       <Image src={item.img} alt="hectorai" />
                                   </div>
-                              // </div>                        
+                              </div>                        
                           )} 
                       </Slider>
                     </div>

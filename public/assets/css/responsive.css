@@ -1041,6 +1041,21 @@
 	section.footer-area {
 		padding-bottom: 30px;
 	}
+
+	.demo-form-container #book-demo > input, .demo-form-container .field-with-icon {
+		width: 90%;
+	}
+	.book-demo-area {
+		padding: 10px;
+	}
+	#book-demo {
+		justify-content: center;
+	}
+
+	.book-demo-area h3 {
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
 }
 
 	
