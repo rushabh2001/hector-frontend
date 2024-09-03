@@ -1,36 +1,52 @@
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Category } from "../types";
+import { useGetCategory } from "./services";
 
-interface Categories_data_type {
-    id: number;
-    categorie: string;
-    items: number;
-}[]
-
-const Categories_data: Categories_data_type[] = [
-    {id: 1, categorie: "General", items: 78 },
-    {id: 2, categorie: "Technology", items: 42 },
-    {id: 3, categorie: "Listing", items: 32 },
-    {id: 4, categorie: "Amazon", items: 85 },
-    // {id: 5, categorie: "Branding", items: 5 },
-]
 const CategoriesArea = () => {
-    return (
-        <>
-            <div className="widget mb-40">
-                <div className="widget-title-box mb-30">
-                <span className="animate-border"></span>
-                <h3 className="widget-title">Categories</h3>
-                </div>
-                <ul className="cat">
-                    {Categories_data.map((item, i) => 
-                        <li key={i}>
-                            <a href="#">{item.categorie} <span className="f-right">{item.items}</span></a>
-                        </li>
-                    
-                    )} 
-                </ul>
-            </div>
-        </>
-    );
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  const { data: categoryData } = useGetCategory();
+
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (categoryData) {
+      setCategories(categoryData.data);
+    }
+  }, [categoryData]);
+
+  return (
+    <>
+      <div className="widget mb-40">
+        <div className="widget-title-box mb-30">
+          <span className="animate-border"></span>
+          <h3 className="widget-title">Categories</h3>
+        </div>
+        <ul className="cat">
+          {categories.map((category) => (
+            <li key={category.category_id}>
+              <Link
+                href={{
+                  pathname: pathname,
+                  query: {
+                    ...Object.fromEntries(searchParams),
+                    category: category.slug,
+                  },
+                }}
+              >
+                {category.category_name}{" "}
+                <span className="f-right">{category.blog_count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
 };
 
 export default CategoriesArea;
