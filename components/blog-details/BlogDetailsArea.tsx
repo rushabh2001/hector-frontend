@@ -18,7 +18,7 @@ interface BlogDetailsAreaProps {
 const BlogDetailsArea: React.FC<BlogDetailsAreaProps> = ({ blogDetails }) => {
   return (
     <>
-      <section className="blog-area gray-bg pt-120 pb-80">
+      <section className="blog-area pt-120 pb-80">
         <div className="container mt-10">
           <div className="row">
             <div className="col-lg-8">

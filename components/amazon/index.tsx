@@ -21,7 +21,7 @@ const Amazon = () => {
     <>
       <HeaderOne style={true} />
       <main>
-        <Breadcrumb top_title="Amazon Marketplace" title="Amazon Marketplace" />
+        <Breadcrumb top_title="Amazon ADs Reporting" title="Amazon ADs Reporting" />
         <HeroSection />
         <LogoSlider />
         <HeatMapSection />
@@ -32,9 +32,6 @@ const Amazon = () => {
         <CTASectionTwo />
         <IconSectionThree />
         <IconSectionFour />
-        {/* <PriceArea />  */}
-        {/* <CoreFeatures /> */}
-        {/* <TestimonailHomeOne style={true} /> */}
       </main>
       <FooterOne />
     </>

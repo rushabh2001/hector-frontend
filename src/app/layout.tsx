@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Hector AI</title>
+        <title>Hector Amazon Reports | Unlease the Power of Advertising with Hector AI</title>
         <link
           rel="icon"
           href="../../assets/img/hector/favicon.ico"
@@ -34,8 +34,6 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Rubik:400,500,700"
           rel="stylesheet" />
-          {/* <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */}
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"></link>
       </head> 
       <body>
