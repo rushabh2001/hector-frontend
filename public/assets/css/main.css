@@ -2672,12 +2672,7 @@ a.btn.btn-subscriptin i {
   padding-top: 180px;
   padding-bottom: 80px;
   background: rgb(6, 46, 128) !important;
-  background: linear-gradient(
-    90deg,
-    rgba(6, 46, 128, 1) 0%,
-    #2a2a9f 35%,
-    rgba(108, 3, 176, 1) 100%
-  ) !important;
+  background: linear-gradient(90deg, rgb(69 67 226) 0%, #7500de 35%, rgba(108, 3, 176, 1) 100%) !important;
 }
 .breadcrumb-text {
   position: relative;
@@ -4359,6 +4354,7 @@ article.postbox .faq_content {
 
 .service-logo-slider .single-brand img {
   height: 100px;
+  max-width: 300px;
 }
 
 .column-text-left {
@@ -4408,7 +4404,7 @@ section.cta-section {
 }
 
 section.service-logo-slider {
-  background: #e6efff;
+  /* background: #e6efff; */
   padding-top: 60px;
 }
 
@@ -4418,7 +4414,7 @@ section.service-logo-slider {
 }
 
 .service-area .title {
-  font-size: 50px;
+  font-size: 33px;
   margin-bottom: 20px;
 }
 
@@ -5041,4 +5037,11 @@ a.hector-landing__features--tab-list-nav.prev-nav-btn {
   font-weight: 400;
   font-size: 16px;
   line-height: 25.184px;
+}
+
+
+.services-content p {
+  font-size: 17px;
+  color: #141414;
+  font-family: "Nunito", sans-serif;
 }

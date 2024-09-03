@@ -1,18 +1,10 @@
 import HeaderOne from "../../layout/headers/header";
-import HeroHomeOne from "./HeroHomeOne";
-import DomainSearch from "./DomainSearchHomeOne";
-import PricingHomeOne from "./PricingHomeOne";
-import ServicesHomeOne from "./ServicesHomeOne";
-import FAQHomeOne from "./FAQHomeOne";
-import ChoseAreaHomeOne from "./ChoseAreaHomeOne";
-import TestimonailHomeOne from "./TestimonailHomeOne";
 import NewsFeedHomeOne from "./NewsFeedHomeOne";
 import BrandHomeOne from "./BrandHomeOne";
 import FooterOne from "../../layout/footers/FooterOne";
-import HeroHomeTwo from "../home-2/HeroHomeTwo";
+import HeroSection from "../home/HeroSection";
 import AboutUs from "./AboutUs";
 import FeaturesTabs from "./FeaturesTabs";
-import ReportsHomeOne from "./ReportsHomeOne";
 import ReportSection from "./ReportSection";
 import ReachOutSection from "./ReachOutSection";
 
@@ -25,24 +17,14 @@ const HomeOne: React.FC<Props> = () => {
     <div className="template-home">
       <HeaderOne name={"home"} />
       <main>
-        {/* <HeroHomeOne /> */}
-        <HeroHomeTwo />
+        <HeroSection />
         <BrandHomeOne />
         <AboutUs />
-    
-        {/* <PricingHomeOne /> */}
-        {/* <ChoseAreaHomeOne /> */}
         <FeaturesTabs style={true} />
         <ReportSection style={true} />
-        {/* <DomainSearch /> */}
-        {/* <ReportsHomeOne /> */}
-        {/* <ServicesHomeOne /> */}
-        {/* <ServicesHomeOne /> */}
         <ReachOutSection />
-        {/* <TestimonailHomeOne /> */}
-        {/* <FAQHomeOne /> */}
         <NewsFeedHomeOne />
-        </main>
+      </main>
       <FooterOne />
     </div>
   );

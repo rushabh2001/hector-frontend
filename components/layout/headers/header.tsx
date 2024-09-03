@@ -2,7 +2,6 @@
 import Link from 'next/link';  
 import NavMenu from './nav-menu';
 import { useState } from 'react';
-import SlideBar from './slide-bar';
 import MobileMenus from './mobile-menus';
 import Logo from "../../../public/assets/img/hector/hector-logo.svg";
 import Logo_dark from "../../../public/assets/img/hector/hector-logo-white.svg";
@@ -26,11 +25,7 @@ const HeaderOne = ({name}:IHeaderProps) => {
                         <div className="col-xl-2 col-lg-2 col-md-5 col-xs-8 d-flex align-items-lg-center justify-content-xs-between">
                             <div className="logo">
                                 <Link href="/"> 
-                                {/* {name == "home" ?  */}
                                     <Image src={Logo} alt="hectorai" /> 
-                                {/* :
-                                    <Image src={Logo_dark} alt="hectorai" /> 
-                                } */}
                                 </Link>
                             </div>
                             <div className="mobile-menu mean-container d-lg-none"> 
@@ -47,39 +42,15 @@ const HeaderOne = ({name}:IHeaderProps) => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-7 d-flex  align-items-center justify-content-xl-end">
-                            {/* <div className="bar d-none d-xl-block">
-                                <button className="info-bar" onClick={() => setSidebarOppen(true)}><i className="far fa-bars"></i></button>
-                            </div>
-                            <div className="search d-none d-xl-block">
-                                <button className={`nav-search search-trigger ${searchOppen && "open"}`}><i className="far fa-search" onClick={() => setSearchOppen(true)}></i></button>
-                            </div> */}
-                            {/* {searchOppen && 
-                                <div className={`search-wrap ${searchOppen && "d-block"}`}>
-                                    <div className="search-inner">
-                                        <i className={`fas fa-times search-close ${searchOppen && "open"}`} onClick={() => setSearchOppen(false)} id="search-close"></i>
-                                        <div className="search-cell">
-                                            <form onSubmit={(e) => e.preventDefault()}>
-                                                <div className="search-field-holder">
-                                                    <input type="search" className="main-search-input" placeholder="Search Your Keyword..." />
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div> 
-                            }                             */}
                             <div className="header-btn d-none d-md-block">
-                                <a className="btn btn-2 btn-solid mr-3" href="/login"><i className="far fa-key"></i> Sign In</a>
+                                <a className="btn btn-2 btn-solid mr-3" href="https://hectorai.live/auth/signin"><i className="far fa-key"></i> Sign In</a>
                                 <a className="btn btn-2 btn-solid" href="/book-demo"> Book a Demo</a>
                             </div>
-                        </div>
-                        <div className=" col-xs-4">
-                           
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <SlideBar sidebarOppen={sidebarOppen} setSidebarOppen={setSidebarOppen} />
         </>
     );
 };

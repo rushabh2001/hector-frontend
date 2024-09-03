@@ -1,13 +1,13 @@
 "use client"
 import Link from "next/link";
-import HeaderTwo from "../../components/layout/headers/header-2"
+import HeaderOne from "../../components/layout/headers/header"
 import FooterOne from "../../components/layout/footers/FooterOne"
 import Breadcrumb  from "../../components/common/breadcrumbs/breadcrumb"
 
 const Error = () => {
     return (
         <>
-             <HeaderTwo style={true} />
+             <HeaderOne style={true} />
              <main>
                 <Breadcrumb top_title="Error Page" title="Error" />
                  <div className="pt-95 pb-95 text-center">

@@ -1,13 +1,9 @@
-import Link from "next/link";
 import Image from "next/image"; 
 import services_data_type from "../types/service-types";
 // service images 
 import service_img_1 from "../../public/assets/img/icon/s01.png";
 import service_img_2 from "../../public/assets/img/icon/s02.png";
 import service_img_3 from "../../public/assets/img/icon/s03.png";
-import service_img_4 from "../../public/assets/img/icon/s04.png";
-import service_img_5 from "../../public/assets/img/icon/s05.png";
-import service_img_6 from "../../public/assets/img/icon/s06.png"; 
 // service data 
  const services_data: services_data_type[] = [
     {
@@ -26,7 +22,7 @@ import service_img_6 from "../../public/assets/img/icon/s06.png";
         id: 3,
         img: service_img_3,
         title: "Keyword / Product Grouping",
-        sm_des: "Visualization of ad metrics according to keyword/ product groups",
+        sm_des: "Visualization of ad metrics according to keyword / product groups",
     },
  ]
 
@@ -36,7 +32,7 @@ import service_img_6 from "../../public/assets/img/icon/s06.png";
 }
  const service_content: service_content_type = {
     title: "Optimize & Organise Like Never Before",
-    sub_title: "Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    sub_title: "",
  }
  const {title, sub_title} = service_content
 
@@ -53,21 +49,16 @@ const IconSectionTwo = () => {
                                 <p>{sub_title}</p>
                             </div>
                         </div>
-                        {/* <div className="col-xl-4 col-lg-4">
-                            <div className="section-link text-left text-lg-right mb-30">
-                                <a href="#" className="btn btn-soft-border">Learn More</a>
-                            </div>
-                        </div> */}
                     </div>
                     <div className="row">
                         {services_data.map((item, i) => 
                             <div key={i} className="col-xl-4 col-lg-4 col-md-6">
                                 <div className="services-box text-center mb-30 wow fadeInUp animated" data-wow-delay="0.3s">
                                     <div className="services-icon mb-35">
-                                        <Image src={item.img} alt="theme-pure" />
+                                        <Image src={item.img} alt="hector-ai" />
                                     </div>
                                     <div className="services-content">
-                                        <h3><Link href="/service-details">{item.title}</Link></h3>
+                                        <h3>{item.title}</h3>
                                         <p>{item.sm_des}</p>
                                     </div>
                                 </div>

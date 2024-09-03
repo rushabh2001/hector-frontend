@@ -1091,6 +1091,13 @@
 	.hector-landing__about-us--title {
 		top: -4px;
 	}
+	.report-tab-container .slick-slider {
+		margin-bottom: 80px;
+		margin-top: 20px;
+	}
+	.hector-landing__features--tab-content-header--description {
+		font-size: 19px;
+	}
 }
 
 	

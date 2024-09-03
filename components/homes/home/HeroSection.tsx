@@ -1,6 +1,6 @@
 import Image from "next/image";
 import hosting_bg  from "../../../public/assets/img/hector/landing-hero.14095905.png"
-import BookADemo from "../../common/BookADemoOld";
+import BookADemo from "../../common/BookADemo";
 
 
 interface hero_content_type {
@@ -33,7 +33,7 @@ const hero_content: hero_content_type = {
 const {bg_img, sub_title, title, bold_text, price, offer, colored_text} = hero_content
 
 
-const HeroHomeTwo = () => {
+const HeroSection = () => {
     return (
         <>
             <section className="slider-area position-relative fix main-section-one">
@@ -82,4 +82,4 @@ const HeroHomeTwo = () => {
     );
 };
 
-export default HeroHomeTwo;
+export default HeroSection;
