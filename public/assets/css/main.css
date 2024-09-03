@@ -4733,8 +4733,8 @@ a.hector-landing__features--tab-list-nav.prev-nav-btn {
   border: none !important;
   height: 48px;
   padding: 0;
-  max-width: 100% !important;
-  width: 100%;
+  /* max-width: 100% !important;
+  width: 100%; */
 }
 
 .select-custom-option {
@@ -5044,4 +5044,76 @@ a.hector-landing__features--tab-list-nav.prev-nav-btn {
   font-size: 17px;
   color: #141414;
   font-family: "Nunito", sans-serif;
+}
+
+section.terms-card.container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+section.terms-card.container p, section.terms-card.container li {
+  font-size: 18px;
+  color: #222222;
+}
+
+.react-select__control {
+  height: 50px;
+  margin-left: -15px;
+  border: none !important;
+  background-color: hsl(0deg 0% 100% / 0%) !important;
+}
+
+.react-select__control:active, .react-select__control:focus, input#contact_number:active, input#contact_number:focus, .country-select:focus, .country-select:active {
+  border: none !important;
+  outline: none !important;
+}
+
+.react-select__placeholder {
+  padding-top: 5px;
+}
+
+
+.react-select__value-container {
+  height: 50px;
+  padding-bottom: 0px;
+}
+
+.react-select__input-container {
+  height: 45px !important;
+}
+
+.basic-select {
+  width: 100%;
+  height: 50px;
+}
+
+.basic-select .select__control {
+  height: 50px;
+}
+
+.select__value-container {
+  height: 40px;
+}
+
+/* .demo-form-input {
+  padding: 0px;
+} */
+
+.country-select .select__input-container {
+  height: 44px;
+  padding-left: 35px;
+}
+
+
+.basic-select input {
+  height: 41px;
+}
+
+.basic-select .select__control, react-select__control {
+  background-color: #f9f9f900 !important;
+}
+
+.contact-field-container .input-group {
+  align-items: center;
+  gap: 5px;
 }

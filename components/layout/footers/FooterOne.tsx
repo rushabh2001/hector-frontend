@@ -19,14 +19,14 @@ const footer_links: footer_links_type[] = [
         links: [
            { title: "Home", link: "/"},
            { title: "Blogs", link: "/blog"},
-           { title: "Amazon ADs Reporting", link: "/amazon-ads-reporting"}
+           { title: "Amazon ADs Reporting", link: "/amazon-ads-reporting"},
+           { title: "Terms and Conditions", link: "/terms"},
         ]
     },
     {
         id: 2,
         title: "Latest Blogs",
         links: [
-            // { title: "Home", link: "#"},
             // { title: "About Us", link: "#"},
             // { title: "Features", link: "#"},
             // { title: "Trusted Partners", link: "#"},

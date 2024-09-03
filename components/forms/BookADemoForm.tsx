@@ -185,7 +185,7 @@ const BookADemoForm = ({
         <div className="col col-md-6 field-with-icon">
           <label>Phone Number</label>
           <div
-            className={`demo-form-input ${
+            className={`demo-form-input contact-field-container ${
               errors.contact_number && "form-error"
             }`}
           >
@@ -204,7 +204,7 @@ const BookADemoForm = ({
         <div className="col col-md-6 field-with-icon">
           <label>Country Name</label>
           <div
-            className={`demo-form-input ${errors.country_name && "form-error"}`}
+            className={`demo-form-input px-0 ${errors.country_name && "form-error"}`}
           >
             <Controller
               name="country_name"
