@@ -1,87 +1,106 @@
+"use client";
+import { useState } from "react";
+import { Comment } from "../types";
+import { getInitails, timeAgo } from "../utils/utils";
+import ReplyCommentModal from "./ReplyCommentModal";
 
-import user_1 from "../../public/assets/img/blog/details/comments1.png";
-import user_2 from "../../public/assets/img/blog/details/comments2.png";
-import user_3 from "../../public/assets/img/blog/details/comments1.png";
-import Image, { StaticImageData } from "next/image";
+interface CommentsBoxProps {
+  comments: Comment[];
+  count: number;
+}
 
-interface comment_box_type {
-    id: number;
-    cls: string;
-    img: StaticImageData;
-    name: string;
-    date: string;
-    reply_text: JSX.Element;
-}[]
-const comment_box: comment_box_type[] = [
-    {
-        id: 1,
-        cls: "",
-        img: user_1,
-        name: "Karon Balina",
-        date: "19th May 2023",
-        reply_text: <>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.</>
-    },
-    {
-        id: 2,
-        cls: "children",
-        img: user_2,
-        name: "Julias Roy",
-        date: "19th May 2023",
-        reply_text: <>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.</>
-    },
-    {
-        id: 3,
-        cls: "",
-        img: user_3,
-        name: "Arista Williamson",
-        date: "19th May 2023",
-        reply_text: <>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.</>
-    },
-]
+const CommentsBox: React.FC<CommentsBoxProps> = ({ comments, count }) => {
+  const [isReplyModalOpen, setIsReplyModalOpen] = useState(false);
+  const [replyToCommentID, setReplyToCommentID] = useState(0);
 
-const CommentsBox = () => {
-    return (
-        <>
-            <div className="post-comments">
-                <div className="blog-coment-title mb-30">
-                    <h2>Comment <span className="comment-count">(3 Comments)</span></h2>
-                </div>
-                <div className="latest-comments">
-                    <ul>
-                    {comment_box.map((item, i)  => 
-                        <li key={i} className={item.cls}>
-                            <div className="comments-box">
-                            <div className="comments-avatar">
-                                <Image src={item.img} alt="theme-pure" />
-                            </div>
-                            <div className="comments-text">
-                                <div className="avatar-name">
-                                    <h5>{item.name}</h5>
-                                    <span>{item.date}</span>
-                                    <a className="reply" href="#"><i className="fas fa-reply"></i>Reply</a>
-                                </div>
-                                <p>{item.reply_text}</p>
-                            </div>
-                            </div>
-                        </li> 
-                    )}  
-                    </ul>
-                </div>
-            </div>
-        </>
-    );
+  const handleReplyButtonClick = (
+    comment_id: number,
+    parent_id: number | null
+  ) => {
+    setIsReplyModalOpen(true);
+    setReplyToCommentID(parent_id !== null ? parent_id : comment_id);
+  };
+
+  return (
+    <>
+      <div className="post-comments" id="comments">
+        <div className="blog-coment-title mb-30">
+          <h2>
+            Comment{" "}
+            <span className="comment-count">
+              ( {count} {count === 1 ? "Comment" : "Comments"})
+            </span>
+          </h2>
+        </div>
+        <div className="latest-comments">
+          <ul>
+            {comments.map((comment) => (
+              <>
+                <li key={comment.blog_comment_id}>
+                  <div className="comments-box">
+                    <div className="comments-avatar">
+                      {getInitails(comment.user_name)}
+                    </div>
+                    <div className="comments-text">
+                      <div className="avatar-name">
+                        <h5>{comment.user_name}</h5>
+                        <span>{timeAgo(comment.created_at)}</span>
+                        <a
+                          className="reply"
+                          onClick={() =>
+                            handleReplyButtonClick(
+                              comment.blog_comment_id,
+                              comment.parent_id
+                            )
+                          }
+                        >
+                          <i className="fas fa-reply"></i>Reply
+                        </a>
+                      </div>
+                      <p>{comment.comment}</p>
+                    </div>
+                  </div>
+                </li>
+                {!!comment.Replies?.length &&
+                  comment.Replies.map((reply) => (
+                    <li key={reply.blog_comment_id} className="children">
+                      <div className="comments-box">
+                        <div className="comments-avatar">
+                          {getInitails(comment.user_name)}
+                        </div>
+                        <div className="comments-text">
+                          <div className="avatar-name">
+                            <h5>{reply.user_name}</h5>
+                            <span>{timeAgo(reply.created_at)}</span>
+                            <a
+                              className="reply"
+                              onClick={() =>
+                                handleReplyButtonClick(
+                                  reply.blog_comment_id,
+                                  reply.parent_id
+                                )
+                              }
+                            >
+                              <i className="fas fa-reply"></i>Reply
+                            </a>
+                          </div>
+                          <p>{reply.comment}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+              </>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <ReplyCommentModal
+        isReplyModalOpen={isReplyModalOpen}
+        setIsReplyModalOpen={setIsReplyModalOpen}
+        replyToCommentID={replyToCommentID}
+      />
+    </>
+  );
 };
 
 export default CommentsBox;
