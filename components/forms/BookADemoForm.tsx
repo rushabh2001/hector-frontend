@@ -1,82 +1,323 @@
-"use client"
-import { useState } from "react"
-import { useForm, useWatch, Control } from "react-hook-form"
-import PhoneInputWithCountrySelect from "react-phone-number-input"
-import Image from 'next/image';
+"use client";
+import { useForm, Controller, FieldError } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Select, { components } from "react-select";
+import Image from "next/image";
+import { demoBookingSchema } from "../utils/schema";
+import { handleInput } from "../utils/keyInputValidation";
+import countries from "../data/countries";
+
+// icons
 import icon_user from "../../public/assets/img/icon/user-input.ce42f3c2.svg";
 import icon_building from "../../public/assets/img/icon/company.35cb6074.svg";
 import icon_link from "../../public/assets/img/icon/link-black.5a10da17.svg";
 import icon_email from "../../public/assets/img/icon/email-input.a634355c.svg";
 
-type FormValues = {
-  firstName: string
-  lastName: string
-  email: string
-  value: string
-}
+// components
+import PhoneNumberInput from "./components/PhoneNumberInput";
+import { decryptedData, encryptData } from "../utils/utils";
+import { useAddDemoBookRequest } from "../book-a-demo/services";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
-const options = [
-  { label: "Chocolate", value: "chocolate" },
-  { label: "Strawberry", value: "strawberry" },
-  { label: "Vanilla", value: "vanilla" },
-]
+type CountryOption = {
+  flag: {};
+  value: string;
+  label: string;
+};
+const BookADemoForm = ({
+  setDemoRequested,
+}: {
+  setDemoRequested: (value: boolean) => void;
+}) => {
+  const { mutate } = useAddDemoBookRequest();
 
-
-
-function IsolateReRender({ control }: { control: Control<FormValues> }) {
-  const firstName = useWatch({
+  const {
+    register,
+    watch,
     control,
-    name: "firstName",
-    defaultValue: "default",
-  })
+    trigger,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      contact_number: "",
+      country_name: "",
+      company_name: "",
+      monthly_ad_spend: "",
+      amazon_brand_store_url: "",
+    },
+    resolver: zodResolver(demoBookingSchema),
+  });
 
-  return <div>{firstName}</div>
-}
+  const customOption = (props: any) => (
+    <components.Option {...props} className="select-custom-option">
+      <img
+        src={props.data?.flag.src}
+        alt="country"
+        className="select-custom-option-icon"
+      />
+      {props.data.label}
+    </components.Option>
+  );
+  const customSingleValue = (props: any) => (
+    <components.SingleValue {...props} className="select-custom-option">
+      <img
+        src={props.data?.flag.src}
+        alt="country"
+        className="select-custom-option-icon"
+      />
+      {props.data.label}
+    </components.SingleValue>
+  );
 
-export default function BookADemoForm() {
-const {register, control, handleSubmit} = useForm()
-  const onSubmit = handleSubmit((data) => console.log(data))
+  const countryNameOptions: CountryOption[] = countries.map((country) => ({
+    flag: country.flag,
+    value: country.name,
+    label: country.name,
+  }));
 
-  const [phone, setPhone] = useState();
+  const onSubmit = handleSubmit(async (data) => {
+    const result = await trigger();
+    if (result) {
+      if (result) {
+        const encryptedData = encryptData(
+          JSON.stringify({
+            first_name: data.first_name,
+            last_name: data.last_name,
+            email: data.email,
+            country_name: data.country_name,
+            company_name: data.company_name,
+            monthly_ad_spend: Number(data.monthly_ad_spend.replace(/,/g, "")),
+            amazon_brand_store_url: data.amazon_brand_store_url,
+            contact_number: Number(data.contact_number),
+          })
+        );
+        await mutate(
+          {
+            details: encryptedData,
+          },
+          {
+            onError: async (error: any) => {
+              // const decryptedError = decryptedData(error.data.response);
+              // toast.dismiss();
+              // toast.error(decryptedError.error);
+              console.log(error);
+            },
+            onSuccess: (data: any) => {
+              const decryptedResponse = decryptedData(data.response);
+              toast.dismiss();
+              toast.success(decryptedResponse.message, {
+                position: "top-right",
+              });
+              setDemoRequested(true);
+              reset();
+            },
+          }
+        );
+      }
+    }
+  });
 
   return (
     <div className="demo-form-container container">
       <form id="book-demo" onSubmit={onSubmit} className="row">
-        <div className="field-with-icon col-md-6">
-          <Image className="field-icon" src={icon_user} alt="hectorai" width={20} /> 
-          <input {...register("firstName")} placeholder="First Name" />
+        <div className="col col-md-6 field-with-icon">
+          <label>First Name</label>
+          <div
+            className={`demo-form-input ${errors.first_name && "form-error"}`}
+          >
+            <Image src={icon_user} alt="hectorai" width={20} />
+            <input
+              {...register("first_name")}
+              placeholder="First Name"
+              className={`mb-0`}
+              onInput={(e) => handleInput(e, "name")}
+            />
+          </div>
+          {errors.first_name && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.first_name as FieldError).message}
+            </div>
+          )}
         </div>
-        <div className="field-with-icon col-md-6">
-          <Image className="field-icon" src={icon_user} alt="hectorai" width={20} /> 
-          <input {...register("lastName")} placeholder="Last Name" />
+        <div className="col col-md-6 field-with-icon">
+          <label>Last Name</label>
+          <div
+            className={`demo-form-input ${errors.last_name && "form-error"}`}
+          >
+            <Image src={icon_user} alt="hectorai" width={20} />
+            <input
+              {...register("last_name")}
+              placeholder="Last Name"
+              className="mb-0"
+              onInput={(e) => handleInput(e, "name")}
+            />
+          </div>
+          {errors.last_name && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.last_name as FieldError).message}
+            </div>
+          )}
         </div>
-        <div className="field-with-icon col-md-6">
-          <Image className="field-icon" src={icon_email} alt="hectorai" width={20} /> 
-          <input type="email" {...register("email")} placeholder="Email" />
+        <div className="col col-md-6 field-with-icon">
+          <label>Email</label>
+          <div className={`demo-form-input ${errors.email && "form-error"}`}>
+            <Image src={icon_email} alt="hectorai" width={20} />
+            <input
+              type="email"
+              {...register("email")}
+              placeholder="Email"
+              className="mb-0"
+              onInput={(e) => handleInput(e, "text")}
+            />
+          </div>
+          {errors.email && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.email as FieldError).message}
+            </div>
+          )}
         </div>
-        <input {...register("phoneNumber")} className="col-md-6" placeholder="Phone Number" />
-        <input {...register("countryName")} className="col-md-6" placeholder="Country Name" />
-        <div className="field-with-icon">
-          <Image className="field-icon col-md-6" src={icon_building} alt="hectorai" width={20} /> 
-          <input {...register("companyName")} placeholder="Company Name" />
+        <div className="col col-md-6 field-with-icon">
+          <label>Phone Number</label>
+          <div
+            className={`demo-form-input ${
+              errors.contact_number && "form-error"
+            }`}
+          >
+            <PhoneNumberInput
+              control={control}
+              name="contact_number"
+              errors={errors}
+            />
+          </div>
+          {errors.contact_number && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.contact_number as FieldError).message}
+            </div>
+          )}
         </div>
-        <input {...register("monthlyAdSpend")} className="col-md-6" placeholder="Monthly Ad Spend" />
-        <div className="field-with-icon col-md-6">
-          <Image className="field-icon" src={icon_link} alt="hectorai" width={20} /> 
-          <input {...register("amazonBrandURL")} placeholder="Amazon Brand Store URL" />
+        <div className="col col-md-6 field-with-icon">
+          <label>Country Name</label>
+          <div
+            className={`demo-form-input ${errors.country_name && "form-error"}`}
+          >
+            <Controller
+              name="country_name"
+              control={control}
+              render={({
+                field: { value, onChange, onBlur, name, ref, ...field },
+              }) => (
+                <Select
+                  {...field}
+                  {...register("country_name")}
+                  className={`basic-select ${
+                    errors.company_name && "form-error"
+                  }`}
+                  classNamePrefix="select"
+                  options={countryNameOptions}
+                  name={name}
+                  value={
+                    value
+                      ? countries.find((option) => option.value == value)
+                      : ""
+                  }
+                  onChange={(val) => (val ? onChange(val.value) : onChange(""))}
+                  placeholder="Country Name"
+                  components={{
+                    SingleValue: customSingleValue,
+                    Option: customOption,
+                  }}
+                />
+              )}
+              rules={{ required: true }}
+            />
+          </div>
+          {errors.country_name && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.country_name as FieldError).message}
+            </div>
+          )}
         </div>
-        
-        {/* <IsolateReRender control={control} /> */}
-        {/* <PhoneInputWithCountrySelect
-          international
-          defaultCountry="RU"
-          value={phone}
-          onChange={setPhone}
-        /> */}
+        <div className="col col-md-6 field-with-icon">
+          <label>Company Name</label>
+          <div
+            className={`demo-form-input ${errors.company_name && "form-error"}`}
+          >
+            <Image src={icon_building} alt="hectorai" width={20} />
+            <input
+              {...register("company_name")}
+              placeholder="Company Name"
+              className="mb-0"
+              onInput={(e) => handleInput(e, "text")}
+            />
+          </div>
+          {errors.company_name && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.company_name as FieldError).message}
+            </div>
+          )}
+        </div>
+        <div className="col col-md-6 field-with-icon">
+          <label>Monthly Ad Spend</label>
+          <div
+            className={`demo-form-input ${
+              errors.monthly_ad_spend && "form-error"
+            }`}
+          >
+            {
+              countries.find(
+                (country) => country.name === watch("country_name")
+              )?.currency_symbol
+            }
+            <input
+              {...register("monthly_ad_spend")}
+              className="col-md-6 mb-0"
+              placeholder="Monthly Ad Spend"
+              onInput={(e) => handleInput(e, "number")}
+            />
+          </div>
+          {errors.monthly_ad_spend && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.monthly_ad_spend as FieldError).message}
+            </div>
+          )}
+        </div>
+        <div className="col col-md-6 field-with-icon">
+          <label>Amazon Brand Store URL</label>
+          <div
+            className={`demo-form-input ${
+              errors.amazon_brand_store_url && "form-error"
+            }`}
+          >
+            <Image src={icon_link} alt="hectorai" width={20} />
+            <input
+              {...register("amazon_brand_store_url")}
+              placeholder="Amazon Brand Store URL"
+              className="mb-0"
+              onInput={(e) => handleInput(e, "text")}
+            />
+          </div>
+          {errors.amazon_brand_store_url && (
+            <div className="text-danger mt-1 text-sm">
+              {(errors.amazon_brand_store_url as FieldError).message}
+            </div>
+          )}
+        </div>
         <div className="submit_container col-md-12">
-          <input className="submit_btn" type="submit"  value="Book a Demo" />
+          <input
+            className="submit_btn mb-0 mt-4"
+            type="submit"
+            value="Book a Demo"
+          />
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
+
+export default BookADemoForm;
