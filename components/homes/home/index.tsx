@@ -13,6 +13,7 @@ import HeroHomeTwo from "../home-2/HeroHomeTwo";
 import AboutUs from "./AboutUs";
 import FeaturesTabs from "./FeaturesTabs";
 import ReportsHomeOne from "./ReportsHomeOne";
+import ReportSection from "./ReportSection";
 
 interface Props{
   name:string
@@ -28,15 +29,16 @@ const HomeOne: React.FC<Props> = () => {
         <BrandHomeOne />
         <AboutUs />
     
-        <PricingHomeOne />
-        <ChoseAreaHomeOne />
-        {/* <FeaturesTabs style={true} /> */}
+        {/* <PricingHomeOne /> */}
+        {/* <ChoseAreaHomeOne /> */}
+        <FeaturesTabs style={true} />
+        <ReportSection style={true} />
         {/* <DomainSearch /> */}
         {/* <ReportsHomeOne /> */}
         {/* <ServicesHomeOne /> */}
         
-        <TestimonailHomeOne />
-        <FAQHomeOne />
+        {/* <TestimonailHomeOne /> */}
+        {/* <FAQHomeOne /> */}
         <NewsFeedHomeOne />
         </main>
       <FooterOne />

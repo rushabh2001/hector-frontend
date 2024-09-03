@@ -73,7 +73,6 @@ const BlogDetailsArea: React.FC<BlogDetailsAreaProps> = ({ blogDetails }) => {
                       </Link>
                     </span>
                   </div>
-
                   <div className="post-text mb-20">
                     <div
                       dangerouslySetInnerHTML={{
@@ -88,7 +87,6 @@ const BlogDetailsArea: React.FC<BlogDetailsAreaProps> = ({ blogDetails }) => {
                       <div className="navigation-border pt-50 mt-40" />
                     </>
                   )}
-
                   <div className="row mt-50">
                     <div className="col-xl-8 col-lg-8 col-md-8 mb-15 d-flex align-items-center">
                       <Link href="/blog" className="back-blogs-btn">
@@ -113,7 +111,6 @@ const BlogDetailsArea: React.FC<BlogDetailsAreaProps> = ({ blogDetails }) => {
                     count={blogDetails?.comment_count}
                   />
                 )}
-
                 <div className="post-comments-form">
                   <div className="post-comments-title">
                     <h2>Post Comments</h2>
@@ -122,7 +119,6 @@ const BlogDetailsArea: React.FC<BlogDetailsAreaProps> = ({ blogDetails }) => {
                 </div>
               </article>
             </div>
-
             <div className="col-lg-4">
               <div className="sidebar-sticky">
                 <ContactForm />

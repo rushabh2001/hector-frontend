@@ -824,5 +824,238 @@
 	.domain-search .btn{ 
 		top: 0px !important;
 	}
+	.justify-content-xs-between {
+		justify-content: space-between;
+	}
+	.section-title h2, .faq-wrapper.mb-30 h3 {
+		font-size: 30px;
+	}
+	.logo-home-section .single-brand {
+		margin: 0px 10px;
+	}
+	.slider-height {
+        min-height: 565px;
+    }
+	.hector-landing__contact-form__actions .btn.btn-2 {
+		padding-left: 10px;
+		height: 55px;
+		width: 100%;
+		z-index: 1;
+	}
+	.newsletter-field input {
+		max-width: 60%;
+		height: 55px;
+		font-size: 16px;
+	}
+	.hector-landing__contact-form__actions {
+		width: 40%;
+	}
+	.newsletter-field input::-webkit-input-placeholder {
+		font-size: 16px;
+	}
+	.hector-landing__about-us--description {
+		color: black;
+	}
+	.hector-landing__about-us--title {
+		padding: 0px 12px;
+		line-height: 30px;
+	}
+	p.hector-landing__about-us {
+		text-align: center;
+	}
+	.pricing-wrapper {
+        padding: 40px 41px;
+    }
+	.hector-landing__testimonials--title {
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 600;
+	}
+	.text-xs-center {
+		text-align: center;
+	}
+	.testimonail-author {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+	.testimonail-img {
+		float: none;
+		align-self: center;
+	}
+	.testimonail-wraper p {
+		text-align: center;
+	}
+	.faq-wrapper .section-title {
+		text-align: center;
+	}
+	.faq-box .accordion-header button {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.faq-box {
+		padding-right: 0px;
+	}
+
+	.faq-wrapper .section-title h4 {
+		font-size: 18px;
+	}
+	.news-feed-info {
+        padding: 25px;
+		text-align: center;
+    }
+	.footer-right-box {
+        text-align: center;
+    }
+	.widgets-titles h4::before {
+		left: unset;
+		transform: translate(50%, -50%);
+	}
+	.footer-text {
+		text-align: center;
+	}
+	.footer-text p {
+		font-size: 20px;
+		padding-right: 20px;
+        padding-left: 20px;
+	}
+	.wegets-body ul li a {
+		font-size: 18px;
+	}
+	.footer-logo {
+		text-align: center;
+	}
+	.footer-bottom-area p {
+		text-align: center;
+	}
+	.footer-sing-up, .footer-btn {
+		text-align: center;
+	}
+	.sidebar-form {
+		text-align: center;
+	}
+	.widget-title {
+		justify-content: center;
+	}
+	.blog-area .post-comments-form {
+		text-align: center;
+	}
+	.blog-area .post-title-box {
+		text-align: center;
+	}
+	.blog-area ul.post-tags {
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.blog-area .blog-title {
+		font-size: 30px;
+	}
+	.blog-area .post-meta {
+		text-align: center;
+	}
+	.blog-area .post-meta span i {
+		padding-bottom: 17px !important;
+	}
+	.blog-area .post-meta {
+		margin-bottom: 10px;
+	}
+	.blog-area .post-text {
+		text-align: center;
+	}
+	.faq-box .accordion-header button {
+		padding: 20px 18px 20px 54px;
+	}
+	.faq-area .col-xl-12 {
+		padding: 0px;
+	}
+	.justify-content-xs-center {
+		justify-content: center !important;
+	}
+	.mt-xs-30 {
+		margin-top: 30px;
+	}
+	h2.related-title {
+		padding: 30px;
+		padding-bottom: 0px;
+		text-align: center;
+	}
+	.related-news {
+		padding: 0px;
+	}
+	.news-feed-titles h4 {
+		margin-top: 7px;
+	}
+	.logo img {
+		width: 82%;
+	}
+	.footer-sing-up h2 {
+		font-size: 36px;
+	}
+	.hero-service-area .title, .service-area-1 .title {
+		font-size: 30px;
+	}
+	.hero-text-container {
+		text-align: center !important;
+	}
+
+	.hero-service-area .row > div:nth-child(1), .service-area-1 .row > div:nth-child(1) {
+		order: 2;
+	}
+	.hero-service-area .row > div:nth-child(2), .service-area-1 .row > div:nth-child(2)  {
+		order: 1;
+	}
+	.hero-service-area {
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
+	.service-image-container img {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.service-area-1 .column-text-right {
+		text-align: center !important;
+		padding-right: 0px;
+	}
+	.service-area-2 .title {
+		font-size: 30px;
+	}
+	.column-text-left {
+		margin-top: 30px;
+		padding-left: 0px;
+		text-align: center !important;
+	}
+	.cta-section .column-text-right {
+		padding-right: 0px;
+		text-align: center !important;
+		justify-content: center;
+	}
+	.cta-desc {
+		width: 100%;
+	}
+	.cta-title {
+		font-size: 38px;
+	}
+	.icon-service-section .section-title {
+		width: 100%;
+	}
+	section.footer-area {
+		padding-bottom: 30px;
+	}
+
+	.demo-form-container #book-demo > input, .demo-form-container .field-with-icon {
+		width: 90%;
+	}
+	.book-demo-area {
+		padding: 10px;
+	}
+	#book-demo {
+		justify-content: center;
+	}
+
+	.book-demo-area h3 {
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
 }
+
 	

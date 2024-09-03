@@ -17,7 +17,7 @@ const {bg_img, sub_title, title, description} = hero_content
 const VisualDataSection = () => {
     return (
         <>
-            <section className="service-area position-relative pb-70 pt-70">
+            <section className="service-area service-area-2 position-relative pb-70 pt-70">
                     {/* <div className="single-slider slider-height" style={{backgroundImage: `url(${bg_img})`}}> */}
                 <div className="container">
                     <div className="row">

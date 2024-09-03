@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-const BookADemo = ({style}: any) => {
+const BookADemoOld = ({style}: any) => {
     return (
         <>
-            <section className={`${style && "domain-search-section"}`}>
-                <div className={`${style && "container"}`}>
-                    <div className={`${style && "domain-box"}`}>
+            <section className={`${style && "domain-search-section"} book-a-demo-section`}>
+                {/* <div className={`${style && "container"}`}> */}
+                    <div className={`${style && "domain-box"} container px-0`}>
                         <div className="row">
-                            <div className="col-xl-12">
+                            <div className="col-xl-12 col-xs-8">
                                 <div className="newsletter-field">
                                     <div className="position-relative">
                                         <form>
@@ -52,10 +52,10 @@ const BookADemo = ({style}: any) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </section>
         </>
     );
 };
 
-export default BookADemo;
+export default BookADemoOld;
