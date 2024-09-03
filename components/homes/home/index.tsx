@@ -14,6 +14,7 @@ import AboutUs from "./AboutUs";
 import FeaturesTabs from "./FeaturesTabs";
 import ReportsHomeOne from "./ReportsHomeOne";
 import ReportSection from "./ReportSection";
+import ReachOutSection from "./ReachOutSection";
 
 interface Props{
   name:string
@@ -36,7 +37,8 @@ const HomeOne: React.FC<Props> = () => {
         {/* <DomainSearch /> */}
         {/* <ReportsHomeOne /> */}
         {/* <ServicesHomeOne /> */}
-        
+        {/* <ServicesHomeOne /> */}
+        <ReachOutSection />
         {/* <TestimonailHomeOne /> */}
         {/* <FAQHomeOne /> */}
         <NewsFeedHomeOne />

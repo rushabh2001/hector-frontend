@@ -8,7 +8,7 @@ const BookADemoOld = ({style}: any) => {
                     <div className={`${style && "domain-box"} container px-0`}>
                         <div className="row">
                             <div className="col-xl-12 col-xs-8">
-                                <div className="newsletter-field">
+                                <div className="newsletter-field wow fadeInUp"  data-wow-delay="0.6s">
                                     <div className="position-relative">
                                         <form>
                                         {/* <form onSubmit={(e) => e.preventDefault()}> */}
