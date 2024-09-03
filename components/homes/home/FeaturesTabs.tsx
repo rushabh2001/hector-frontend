@@ -89,22 +89,22 @@ const FeaturesTabs = () => {
 
         const settings = {
             onReInit: () => setCurrentSlide(slider1?.innerSlider.state.currentSlide),
-            lazyLoad: true,
+            // lazyLoad: true,
             asNavFor: ".slider-nav",
             focusOnSelect: true,
             centerMode: true, 
             // centerPadding: '60px',   
             variableWidth: true,       
-            arrows: false, 
+            // arrows: false, 
             infinite: false, 
             nextArrow: (
                 <div>
-                  <div className="next-slick-arrow"> ⫸ </div>
+                  <div className="next-slick-arrow"> <i className="fas fa-chevron-right"></i> </div>
                 </div>
               ),
               prevArrow: (
                 <div>
-                  <div className="prev-slick-arrow"> ⫷ </div>
+                  <div className="prev-slick-arrow"> <i className="fas fa-chevron-left"></i> </div>
                 </div>
               ),
           };
@@ -154,7 +154,7 @@ const FeaturesTabs = () => {
                                         <div className="tab-zero tab-custom-content">
                                             <div className="container">
                                                 <div className="row">
-                                                    <div className="col-md-8">
+                                                    <div className="col-md-8 col-xs-12">
                                                         <Image className="service-img" src={img_thumb_1} alt="hector-ai" />
                                                     </div>
                                                     <div className="col-md-4">

@@ -68,8 +68,8 @@ const HeroHomeTwo = () => {
                                         </div> */}
                                     </div>
                                 </div>
-                                <div className="col-xl-5 d-none d-xl-block align-content-center">
-                                   <div className="slider-bottom-imgs wow fadeInRight animated" data-wow-delay="1.3s">
+                                <div className="col-md-5 d-xl-block align-content-center">
+                                   <div className="slider-bottom-imgs wow fadeInUp animated" data-wow-delay="1.3s">
                                       <Image src={hosting_bg} alt="hectorai" />
                                     </div>
                                 </div>

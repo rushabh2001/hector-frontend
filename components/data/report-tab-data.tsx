@@ -1,6 +1,6 @@
 
 
-interface feature_tab_type {
+export interface report_tab_type {
     id: number;
     active: string,
     tab_id: string,
@@ -11,23 +11,23 @@ interface feature_tab_type {
     description: string;
 }[]
 
-const feature_data: feature_tab_type[] = [
+const report_data: report_tab_type[] = [
     {
         id: 1, 
         tab_id: "live-reporting-tab",
         data_bs_target:"reporting-tab-pane",
         active: "show active",
-        thead: "Unified Dashboard",
+        thead: "Targeting Reports",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
-        description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
+        description: "Get the first 1000 Search Queries which matters to your business and it's total Queries, Impression, Click, Add to Cart & Order share for every week and month. Get the same Search Queries at each ASIN Level too.",
     },
     {
         id: 2, 
         tab_id: "live-reporting-tab",
         data_bs_target:"reporting-tab-pane",
         active: "",
-        thead: "Live Reporting",
+        thead: "Keyword Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
@@ -37,7 +37,7 @@ const feature_data: feature_tab_type[] = [
         tab_id: "data-variation-tab",
         data_bs_target:"variation-tab-pane",
         active: "",
-        thead: "Data Variation less than 1%",
+        thead: "Search Term Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
@@ -47,7 +47,7 @@ const feature_data: feature_tab_type[] = [
         tab_id: "unlimited-data-tab",
         data_bs_target:"unlimited-tab-pane",
         active: "",
-        thead: "Unlimited Data Storage",
+        thead: "ASIN Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
@@ -57,7 +57,7 @@ const feature_data: feature_tab_type[] = [
         tab_id: "blend-your-tab",
         data_bs_target:"blend-tab-pane",
         active: "",
-        thead: "Blend your Datapoints across multiple Amazon Reports",
+        thead: "Placement Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
@@ -67,7 +67,7 @@ const feature_data: feature_tab_type[] = [
         tab_id: "most-powerful-tab",
         data_bs_target:"powerful-tab-pane",
         active: "",
-        thead: "Most Powerful Search Bar",
+        thead: "Seller Sales Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
@@ -77,53 +77,43 @@ const feature_data: feature_tab_type[] = [
         tab_id: "intelligent-dynamic-tab",
         data_bs_target:"intelligent-tab-pane",
         active: "",
-        thead: "Intelligent Dynamic Rules",
+        thead: "Vendor Central Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
     },
     {
         id: 8, 
-        tab_id: "compare-tab",
-        data_bs_target:"compare-tab-pane",
+        tab_id: "intelligent-dynamic-tab",
+        data_bs_target:"intelligent-tab-pane",
         active: "",
-        thead: "Compare like never before",
+        thead: "Amazon Marketing Stream Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
-        description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
+        description: "Now measure your Advertising Performance for every hour of the day at every campaigns level, Ad Group Level, Targeting Level, Placement Level and Bidding Strategy level. Identify lowest CPC & Highest CR% every hour for every day of the week.",
     },
     {
         id: 9, 
-        tab_id: "performance-tab",
-        data_bs_target:"performance-tab-pane",
+        tab_id: "intelligent-dynamic-tab",
+        data_bs_target:"intelligent-tab-pane",
         active: "",
-        thead: "Performance at Product Category & Sub-Category Level",
+        thead: "Top Search Term Reports",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
-        description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
+        description: "Get the first 3 Clicked ASIN for top 10,000 Search Terms on Amazon on a daily basis and get the Click Share & Conversion Share for each Search Term",
     },
     {
         id: 10, 
-        tab_id: "granular-tab",
-        data_bs_target:"granular-tab-pane",
+        tab_id: "intelligent-dynamic-tab",
+        data_bs_target:"intelligent-tab-pane",
         active: "",
-        thead: "The Most Granular Breakdown of Advertising Report",
+        thead: "Search Query Performance Report",
         tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
         icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
-        description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
-    },
-    {
-        id: 11, 
-        tab_id: "take-action-tab",
-        data_bs_target:"take-action-tab-pane",
-        active: "",
-        thead: "Take Action that changes live on Amazon Ad Account",
-        tab_one_img: "../public/assets/img/hector/tab_1.7f885e86.png",
-        icon_img: "../public/assets/img/hector/tab_1.7f885e86.png",
-        description: "Stop seeing Advertising Data stacked together rather see your Performance at a custom Product Category & Sub Category level, so that you can decide the budget allocation based on which product category or sub category is working for you. Find out which Category or Sub Category is giving you high or low ROAS",
+        description: "Get the first 1000 Search Queries which matters to your business and it's total Queries, Impression, Click, Add to Cart & Order share for every week and month. Get the same Search Queries at each ASIN Level too.",
     },
 ]
-export default feature_data
+export default report_data
 
 
                  
