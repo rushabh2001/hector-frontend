@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Select, { components, SingleValue } from "react-select";
 import Image from "next/image";
-import { useController, Control, FieldErrors } from "react-hook-form";
+import { useController, useFormContext } from "react-hook-form";
 import countries from "../../data/countries";
 import { handleInput } from "../../utils/keyInputValidation";
 
@@ -14,17 +14,18 @@ interface Country {
 }
 
 interface PhoneNumberInputProps {
-  control: Control;
   name: string;
-  errors: FieldErrors;
 }
 
-const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
-  control,
-  name,
-  errors,
-}) => {
-  const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
+const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({ name }) => {
+  const [selectedCountry, setSelectedCountry] = useState<Country | undefined>(
+    countries?.find((country) => country.name === "India")
+  );
+
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
 
   const {
     field: { onChange, onBlur, value, ref },
@@ -56,7 +57,7 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
   const customSingleValue = (props: any) => (
     <components.SingleValue {...props} className="select-custom-option">
       <img
-        src={props.data?.flag.src}
+        src={props.data?.flag}
         alt="country"
         className="select-custom-option-icon"
       />
@@ -97,7 +98,8 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
     const matchedCountry = findCountryByNumber(value);
     if (matchedCountry && matchedCountry.id !== selectedCountry?.id) {
       setSelectedCountry(
-        countryOptions.find((option) => option.id === matchedCountry.id) || null
+        countryOptions.find((option) => option.id === matchedCountry.id) ||
+          undefined
       );
     }
   }, [value]);
@@ -111,6 +113,8 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
         className="country-select"
         classNamePrefix="react-select"
         components={{ SingleValue: customSingleValue }}
+        isSearchable={false}
+        backspaceRemovesValue={false}
       />
       {value ? "+" : ""}
       <input
@@ -124,7 +128,10 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
         placeholder="Enter phone number"
         onInput={(e) => handleInput(e, "phone_number")}
         maxLength={
-          selectedCountry ? selectedCountry.phone_number_length : undefined
+          selectedCountry
+            ? selectedCountry.phone_number_length +
+              selectedCountry.country_code.length
+            : undefined
         }
       />
     </div>

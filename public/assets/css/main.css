@@ -2672,7 +2672,12 @@ a.btn.btn-subscriptin i {
   padding-top: 180px;
   padding-bottom: 80px;
   background: rgb(6, 46, 128) !important;
-  background: linear-gradient(90deg, rgb(69 67 226) 0%, #7500de 35%, rgba(108, 3, 176, 1) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgb(69 67 226) 0%,
+    #7500de 35%,
+    rgba(108, 3, 176, 1) 100%
+  ) !important;
 }
 .breadcrumb-text {
   position: relative;
@@ -5043,7 +5048,6 @@ a.hector-landing__features--tab-list-nav.prev-nav-btn {
   line-height: 25.184px;
 }
 
-
 .services-content p {
   font-size: 17px;
   color: #141414;
@@ -5055,7 +5059,8 @@ section.terms-card.container {
   padding-bottom: 70px;
 }
 
-section.terms-card.container p, section.terms-card.container li {
+section.terms-card.container p,
+section.terms-card.container li {
   font-size: 18px;
   color: #222222;
 }
@@ -5071,7 +5076,12 @@ section.terms-card.container p, section.terms-card.container li {
   box-shadow: none !important;
 }
 
-.react-select__control:active, .react-select__control:focus, input#contact_number:active, input#contact_number:focus, .country-select:focus, .country-select:active {
+.react-select__control:active,
+.react-select__control:focus,
+input#contact_number:active,
+input#contact_number:focus,
+.country-select:focus,
+.country-select:active {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
@@ -5080,7 +5090,6 @@ section.terms-card.container p, section.terms-card.container li {
 .react-select__placeholder {
   padding-top: 5px;
 }
-
 
 .react-select__value-container {
   height: 50px;
@@ -5118,46 +5127,18 @@ section.terms-card.container p, section.terms-card.container li {
   padding-left: 35px;
 }
 
-
 .basic-select input {
   height: 41px;
 }
 
-.basic-select .select__control, react-select__control {
+.basic-select .select__control,
+react-select__control {
   background-color: #f9f9f900 !important;
 }
 
 .contact-field-container .input-group {
   align-items: center;
   gap: 5px;
-}
-
-.react-select__menu {
-  width: 290px !important;
-}
-
-.select__input {
-  color: transparent;
-}
-
-.basic-select .select-custom-option, .basic-select .select__value-container .select__placeholder {
-  top: -13px !important;
-  position: relative;
-  display: flex;
-  gap: 10px;
-  /* justify-content: center; */
-}
-
-.country-select .react-select__indicator.react-select__dropdown-indicator {
-  padding-left: 0px;
-}
-
-.country-select .react-select__placeholder {
-  padding-top: 0px;
-}
-
-.country-select .select-custom-option {
-  padding-top: 5px;
 }
 
 .postbox__text.potsbox_single .se-image-container img {
@@ -5174,4 +5155,12 @@ section.terms-card.container p, section.terms-card.container li {
 
 body {
   overflow: auto !important;
+}
+
+.css-b62m3t-container {
+  position: static !important;
+}
+
+.react-select__value-container input {
+  display: none !important;
 }
