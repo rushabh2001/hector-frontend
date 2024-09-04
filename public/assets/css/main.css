@@ -4404,7 +4404,7 @@ section.cta-section {
 
 .service-logo-slider .single-brand img {
   background: white;
-  padding: 20px;
+  padding: 20px 40px;
   border-radius: 10px;
 }
 
@@ -4745,12 +4745,16 @@ a.hector-landing__features--tab-list-nav.prev-nav-btn {
 .select-custom-option {
   display: flex !important;
   align-items: center;
-  gap: 16px;
+  grid-area: 1;
+}
+
+.react-select__indicators {
+  flex-direction: row-reverse;
 }
 
 .select-custom-option-icon {
   width: 25px;
-  height: 15px;
+  height: auto;
   border-radius: 2px;
 }
 
@@ -5063,9 +5067,12 @@ section.terms-card.container li {
 
 .react-select__control {
   height: 50px;
+  width: 74px !important;
   margin-left: -15px;
   border: none !important;
   background-color: hsl(0deg 0% 100% / 0%) !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
 }
 
@@ -5077,6 +5084,7 @@ input#contact_number:focus,
 .country-select:active {
   border: none !important;
   outline: none !important;
+  box-shadow: none !important;
 }
 
 .react-select__placeholder {
@@ -5086,7 +5094,12 @@ input#contact_number:focus,
 .react-select__value-container {
   height: 50px;
   padding-bottom: 0px;
+  padding-right: 0px;
 }
+
+/* .select-custom-option {
+  margin-right: 9px;
+} */
 
 .react-select__input-container {
   height: 45px !important;
@@ -5126,6 +5139,22 @@ react-select__control {
 .contact-field-container .input-group {
   align-items: center;
   gap: 5px;
+}
+
+.postbox__text.potsbox_single .se-image-container img {
+  width: 100%;
+}
+
+#scrollUp:hover {
+  background: #5932ea;
+}
+
+.postbox__text.potsbox_single h2 {
+  line-height: 25px !important;
+}
+
+body {
+  overflow: auto !important;
 }
 
 .css-b62m3t-container {
