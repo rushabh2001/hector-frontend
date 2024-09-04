@@ -36,7 +36,7 @@ const CTASectionTwo = () => {
                             </div>
                         </div>
                         <div className="col-xl-2  align-items-center d-flex justify-content-end justify-content-xs-center">
-                            <a href="#" className="btn btn-white mx-0">Book a Demo</a>
+                            <a href="/book-demo" className="btn btn-white mx-0">Book a Demo</a>
                         </div>
                     </div>
                 </div>

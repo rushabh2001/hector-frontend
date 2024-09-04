@@ -15,6 +15,7 @@ import IconSectionThree from "./IconSectionThree";
 import IconSectionTwo from "./IconSectionTwo";
 import LogoSlider from "./LogoSlider";
 import VisualDataSection from "./VisualDataSection";
+import VisualSection from "./VisualSection";
 
 const Amazon = () => {
   return (
@@ -26,6 +27,7 @@ const Amazon = () => {
         <LogoSlider />
         <HeatMapSection />
         <VisualDataSection />
+        <VisualSection />
         <CTASection />
         <IconSectionOne />
         <IconSectionTwo />

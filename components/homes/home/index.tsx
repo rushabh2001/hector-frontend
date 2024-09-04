@@ -23,7 +23,7 @@ const HomeOne: React.FC<Props> = () => {
         <FeaturesTabs style={true} />
         <ReportSection style={true} />
         <ReachOutSection />
-        <NewsFeedHomeOne />
+        {/* <NewsFeedHomeOne /> */}
       </main>
       <FooterOne />
     </div>

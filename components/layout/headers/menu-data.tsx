@@ -19,8 +19,8 @@ const menu_data: MenuItem[] = [
   },
   {
     id: 2,
-    title: "Amazon Reports Tool",
-    link: "/amazon-report-tool",
+    title: "Services",
+    link: "/amazon-ad-reporting",
     has_dropdown: false,
   },
 

@@ -47,7 +47,7 @@ const FooterOne = () => {
       links: [
         { title: "Home", link: "/" },
         { title: "Blogs", link: "/blog" },
-        { title: "Amazon ADs Reporting", link: "/amazon-ads-reporting" },
+        { title: "Amazon ADs Reporting", link: "/amazon-ad-reporting" },
         { title: "Terms and Conditions", link: "/terms" },
       ],
     },
