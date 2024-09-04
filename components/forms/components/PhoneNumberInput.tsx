@@ -128,7 +128,10 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({ name }) => {
         placeholder="Enter phone number"
         onInput={(e) => handleInput(e, "phone_number")}
         maxLength={
-          selectedCountry ? selectedCountry.phone_number_length : undefined
+          selectedCountry
+            ? selectedCountry.phone_number_length +
+              selectedCountry.country_code.length
+            : undefined
         }
       />
     </div>

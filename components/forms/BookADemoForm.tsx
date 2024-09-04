@@ -98,7 +98,7 @@ const BookADemoForm = ({
             company_name: data.company_name,
             monthly_ad_spend: Number(data.monthly_ad_spend.replace(/,/g, "")),
             amazon_brand_store_url: data.amazon_brand_store_url,
-            contact_number: Number(data.contact_number.replace(/\D/g, "")),
+            contact_number: data.contact_number.replace(/\D/g, ""),
           })
         );
         await mutate(
@@ -126,7 +126,6 @@ const BookADemoForm = ({
     }
   });
 
-  console.log(getValues());
   return (
     <div className="demo-form-container container">
       <FormProvider {...methods}>
