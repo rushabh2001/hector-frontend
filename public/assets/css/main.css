@@ -5164,3 +5164,8 @@ body {
 .react-select__value-container input {
   display: none !important;
 }
+
+.book-demo-area .submit_btn:disabled {
+  opacity: 70%;
+  cursor: not-allowed;
+}

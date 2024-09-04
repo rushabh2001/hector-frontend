@@ -322,6 +322,7 @@ const BookADemoForm = ({
               className="submit_btn mb-0 mt-4"
               type="submit"
               value="Book a Demo"
+              disabled={watch("contact_number").length < 9}
             />
           </div>
         </form>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import SocialLinks from "../../common/social-links";
 import Image from "next/image";
 import footer_logo from "../../../public/assets/img/hector/hector-logo-white.svg";
+import { useState } from "react";
 
 interface footer_links_type {
   id: number;
@@ -12,30 +13,7 @@ interface footer_links_type {
     link: string;
   }[];
 }
-// footer links data
-const footer_links: footer_links_type[] = [
-  {
-    id: 1,
-    title: "Quick Links",
-    links: [
-      { title: "Home", link: "/" },
-      { title: "Blogs", link: "/blog" },
-      { title: "Amazon ADs Reporting", link: "/amazon-ads-reporting" },
-      { title: "Terms and Conditions", link: "/terms" },
-    ],
-  },
-  {
-    id: 2,
-    title: "Latest Blogs",
-    links: [
-      // { title: "About Us", link: "#"},
-      // { title: "Features", link: "#"},
-      // { title: "Trusted Partners", link: "#"},
-      // { title: "Blogs", link: "#"},
-      // { title: "Contact Us", link: "#"},
-    ],
-  },
-];
+
 // footer content type
 interface footer_content_type {
   sub_title: string;
@@ -62,6 +40,23 @@ const { sub_title, title, info_us, address, mail, website, footer_info } =
   footer_content;
 
 const FooterOne = () => {
+  const [footerLinks, setFooterLinks] = useState<footer_links_type[]>([
+    {
+      id: 1,
+      title: "Quick Links",
+      links: [
+        { title: "Home", link: "/" },
+        { title: "Blogs", link: "/blog" },
+        { title: "Amazon ADs Reporting", link: "/amazon-ads-reporting" },
+        { title: "Terms and Conditions", link: "/terms" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Latest Blogs",
+      links: [],
+    },
+  ]);
   return (
     <>
       <footer>
@@ -120,7 +115,7 @@ const FooterOne = () => {
               <div className="col-xl-8 col-lg-8">
                 <div className="footer-right-box pl-70">
                   <div className="row">
-                    {footer_links.map((item, i) => (
+                    {footerLinks.map((item, i) => (
                       <div key={i} className="col-xl-6 col-lg-6 col-md-6">
                         <div className="wigets mb-30">
                           <div className="widgets-titles">
