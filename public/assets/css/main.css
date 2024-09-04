@@ -4399,7 +4399,7 @@ section.cta-section {
 
 .service-logo-slider .single-brand img {
   background: white;
-  padding: 20px;
+  padding: 20px 40px;
   border-radius: 10px;
 }
 
@@ -4740,12 +4740,16 @@ a.hector-landing__features--tab-list-nav.prev-nav-btn {
 .select-custom-option {
   display: flex !important;
   align-items: center;
-  gap: 16px;
+  grid-area: 1;
+}
+
+.react-select__indicators {
+  flex-direction: row-reverse;
 }
 
 .select-custom-option-icon {
   width: 25px;
-  height: 15px;
+  height: auto;
   border-radius: 2px;
 }
 
@@ -5058,14 +5062,19 @@ section.terms-card.container p, section.terms-card.container li {
 
 .react-select__control {
   height: 50px;
+  width: 74px !important;
   margin-left: -15px;
   border: none !important;
   background-color: hsl(0deg 0% 100% / 0%) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .react-select__control:active, .react-select__control:focus, input#contact_number:active, input#contact_number:focus, .country-select:focus, .country-select:active {
   border: none !important;
   outline: none !important;
+  box-shadow: none !important;
 }
 
 .react-select__placeholder {
@@ -5076,7 +5085,12 @@ section.terms-card.container p, section.terms-card.container li {
 .react-select__value-container {
   height: 50px;
   padding-bottom: 0px;
+  padding-right: 0px;
 }
+
+/* .select-custom-option {
+  margin-right: 9px;
+} */
 
 .react-select__input-container {
   height: 45px !important;
@@ -5116,4 +5130,48 @@ section.terms-card.container p, section.terms-card.container li {
 .contact-field-container .input-group {
   align-items: center;
   gap: 5px;
+}
+
+.react-select__menu {
+  width: 290px !important;
+}
+
+.select__input {
+  color: transparent;
+}
+
+.basic-select .select-custom-option, .basic-select .select__value-container .select__placeholder {
+  top: -13px !important;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  /* justify-content: center; */
+}
+
+.country-select .react-select__indicator.react-select__dropdown-indicator {
+  padding-left: 0px;
+}
+
+.country-select .react-select__placeholder {
+  padding-top: 0px;
+}
+
+.country-select .select-custom-option {
+  padding-top: 5px;
+}
+
+.postbox__text.potsbox_single .se-image-container img {
+  width: 100%;
+}
+
+#scrollUp:hover {
+  background: #5932ea;
+}
+
+.postbox__text.potsbox_single h2 {
+  line-height: 25px !important;
+}
+
+body {
+  overflow: auto !important;
 }

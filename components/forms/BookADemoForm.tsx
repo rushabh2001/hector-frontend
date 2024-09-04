@@ -221,6 +221,7 @@ const BookADemoForm = ({
                   classNamePrefix="select"
                   options={countryNameOptions}
                   name={name}
+                  isSearchable={false}
                   value={
                     value
                       ? countries.find((option) => option.value == value)

@@ -1098,6 +1098,12 @@
 	.hector-landing__features--tab-content-header--description {
 		font-size: 19px;
 	}
+
+	.basic-pagination-2 ul li button {
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+	}
 }
 
 	
