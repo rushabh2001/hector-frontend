@@ -238,6 +238,7 @@ const BookADemoForm = ({
                       SingleValue: customSingleValue,
                       Option: customOption,
                     }}
+                    isSearchable={false}
                   />
                 )}
                 rules={{ required: true }}

@@ -20,21 +20,21 @@ const footer_links: footer_links_type[] = [
     links: [
       { title: "Home", link: "/" },
       { title: "Blogs", link: "/blog" },
-      { title: "Amazon ADs Reporting", link: "/amazon-ads-reporting" },
+      { title: "Amazon ADs Reporting", link: "/amazon-ad-reporting" },
       { title: "Terms and Conditions", link: "/terms" },
     ],
   },
-  {
-    id: 2,
-    title: "Latest Blogs",
-    links: [
-      // { title: "About Us", link: "#"},
-      // { title: "Features", link: "#"},
-      // { title: "Trusted Partners", link: "#"},
-      // { title: "Blogs", link: "#"},
-      // { title: "Contact Us", link: "#"},
-    ],
-  },
+  // {
+  //   id: 2,
+  //   title: "Latest Blogs",
+  //   links: [
+  //     // { title: "About Us", link: "#"},
+  //     // { title: "Features", link: "#"},
+  //     // { title: "Trusted Partners", link: "#"},
+  //     // { title: "Blogs", link: "#"},
+  //     // { title: "Contact Us", link: "#"},
+  //   ],
+  // },
 ];
 // footer content type
 interface footer_content_type {
