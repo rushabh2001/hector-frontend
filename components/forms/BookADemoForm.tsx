@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { useForm, Controller, FieldError, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Select, { components } from "react-select";
@@ -24,11 +25,19 @@ type CountryOption = {
   value: string;
   label: string;
 };
+
+type RoutingState = {
+  email: string;
+  first_name?: string;
+  last_name?: string;
+};
+
 const BookADemoForm = ({
   setDemoRequested,
 }: {
   setDemoRequested: (value: boolean) => void;
 }) => {
+  const [routingState, setRoutingState] = useState<RoutingState>();
   const { mutate } = useAddDemoBookRequest();
 
   const methods = useForm({
@@ -52,7 +61,7 @@ const BookADemoForm = ({
     trigger,
     reset,
     handleSubmit,
-    getValues,
+    setValue,
     formState: { errors },
   } = methods;
 
@@ -125,6 +134,23 @@ const BookADemoForm = ({
       }
     }
   });
+
+  useEffect(() => {
+    const storedState = sessionStorage.getItem("data");
+    if (storedState) {
+      setRoutingState(JSON.parse(storedState));
+      sessionStorage.removeItem("data");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (routingState) {
+      if (routingState.email) setValue("email", routingState.email);
+      if (routingState.first_name)
+        setValue("first_name", routingState.first_name);
+      if (routingState.last_name) setValue("last_name", routingState.last_name);
+    }
+  }, [routingState]);
 
   return (
     <div className="demo-form-container container">

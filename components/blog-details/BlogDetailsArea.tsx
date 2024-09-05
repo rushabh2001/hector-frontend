@@ -64,7 +64,7 @@ const BlogDetailsArea: React.FC<BlogDetailsAreaProps> = ({ blogDetails }) => {
                       <i className="far fa-user"></i> {blogDetails?.author}
                     </span>
                     <span>
-                      <Link href="#">
+                      <Link href={`/blog/${blogDetails.slug}#comments`}>
                         <i className="far fa-comments"></i>{" "}
                         {blogDetails?.comment_count}{" "}
                         {blogDetails?.comment_count === 1

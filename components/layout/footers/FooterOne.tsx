@@ -3,7 +3,10 @@ import Link from "next/link";
 import SocialLinks from "../../common/social-links";
 import Image from "next/image";
 import footer_logo from "../../../public/assets/img/hector/hector-logo-white.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useGetBlogList } from "../../blogs/services";
+import { encryptData } from "../../utils/utils";
+import { Blog } from "../../types";
 
 interface footer_links_type {
   id: number;
@@ -57,6 +60,33 @@ const FooterOne = () => {
       links: [],
     },
   ]);
+
+  const encryptedData = encryptData(
+    JSON.stringify({
+      page: 1,
+      limit: 4,
+    })
+  );
+
+  const { data } = useGetBlogList(encryptedData);
+
+  useEffect(() => {
+    if (data) {
+      const modifiedData = data.data.map((item: Blog) => ({
+        title: item.title,
+        link: item.slug,
+      }));
+      setFooterLinks((prevState) => {
+        const updatedLinks = prevState.map((link) => {
+          if (link.id === 2) {
+            return { ...link, links: modifiedData };
+          }
+          return link;
+        });
+        return updatedLinks;
+      });
+    }
+  }, [data]);
   return (
     <>
       <footer>
