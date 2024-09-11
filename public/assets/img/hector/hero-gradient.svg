@@ -49,7 +49,7 @@
 			<rect x="662" y="-395" style="fill:url(#SVGID_00000002362489874481274370000007172175978744211608_);" width="892" height="790"/>
 		
 			<radialGradient id="SVGID_00000122714467146003358900000016363332985607845514_" cx="0.2204" cy="929" r="1" gradientTransform="matrix(2.639114e-14 431 535.333 -3.277969e-14 -496431.375 371)" gradientUnits="userSpaceOnUse">
-			<stop  offset="0" style="stop-color:#5932EA;stop-opacity:0.21"/>
+			<stop  offset="0" style="stop-color:#5932ea;stop-opacity:0.21"/>
 			<stop  offset="7.017659e-02" style="stop-color:#623DEB;stop-opacity:0.1885"/>
 			<stop  offset="0.1941" style="stop-color:#7A5BEE;stop-opacity:0.1505"/>
 			<stop  offset="0.3572" style="stop-color:#A18BF3;stop-opacity:0.1005"/>

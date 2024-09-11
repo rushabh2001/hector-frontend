@@ -74,7 +74,8 @@ const MobileMenus = () => {
                         onClick={() => openMobileMenu(menu.title)}
                         style={{ fontSize: "18px", cursor: "pointer" }}
                       >
-                        <i className="fal fa-plus"></i>
+                        {menu.has_dropdown && <i className="fas fa-chevron-down"></i>}
+                      
                       </a>
                     </li>
                   )}

@@ -1,74 +1,11 @@
 "use client"
-import Link from "next/link";
 import Image from "next/image";
-import news_data from "../../data/news-data";
-import line_img from "../../../public/assets/img/icon/line.png";
 import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import report_data, { report_tab_type } from "../../data/report-tab-data";
 import img_thumb from "../../../public/assets/img/hector/report-search-term.e077c286.png";
-import feature_data from "../../data/feature-tab-data";
-
-const setting = {
-    arrows: false, 
-    infinite: false, 
-    speed: 300, 
-    // slidesToShow: 3, 
-    // slidesToScroll: 1, 
-    centerMode: true, 
-    // centerPadding: '160px',
-    // asNavFor: '.slider',
-    focusOnSelect: true,
-    responsive: [ 
-        { 
-        breakpoint: 1200, 
-        settings: { 
-            slidesToShow: 2, 
-            slidesToScroll:1, 
-            infinite: false, 
-            dots: true, 
-            centerMode: true, 
-        } 
-        }, 
-        { 
-        breakpoint: 992, 
-        settings: { 
-            slidesToShow: 2, 
-            slidesToScroll: 1, 
-            arrows: false, 
-            centerMode: true, 
-            infinite: false, 
-        } 
-        }, 
-        { 
-        breakpoint: 767, 
-        settings: { 
-            slidesToShow: 1, 
-            slidesToScroll: 1, 
-            arrows: true, 
-            infinite: false, 
-        }
-    
-        }
- 
-   ]
-}
 
 const ReportSection = () => {
-    const sliderRef = useRef<Slider | null>(null);
-
-    const handlePrevClick = () => {
-      if (sliderRef.current) {
-        sliderRef.current.slickPrev();
-      }
-    };
-  
-    const handleNextClick = () => {
-      if (sliderRef.current) {
-        sliderRef.current.slickNext();
-      }
-    };
-
     const [slider1, setSlider1] = useState(null);
     const [nav1, setNav1] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);

@@ -10,11 +10,11 @@ const Contact = () => {
     <>
       <HeaderOne style={true} />
       <main>
-        <Breadcrumb top_title="Contact Us" title="About" />
-        <GoogleMap />
+        <Breadcrumb top_title="Contact Us" title="Contact Us" />
         <ContractServices />
         <ContractArea />
-      </main>
+        <GoogleMap />
+        </main>
       <FooterOne />
     </>
   );

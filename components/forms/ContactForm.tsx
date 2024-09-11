@@ -1,5 +1,7 @@
 "use client"
 
+import PhoneNumberInput from "./components/PhoneNumberInput";
+
 const ContactForm = () => {
     return (
         <>
@@ -22,6 +24,15 @@ const ContactForm = () => {
                         <div className="contract-page-form phone_icon">
                         <label htmlFor="text"><i className="far fa-phone"></i></label>
 
+                        {/* <div
+                            className={`demo-form-input contact-field-container`}>
+                            <PhoneNumberInput name="contact_number" />
+                        </div>
+                            {errors.contact_number && (
+                            <div className="text-danger mt-1 text-sm">
+                                {(errors.contact_number as FieldError).message}
+                            </div>  )} */}
+                        
                         <input
                             type="text"
                             name="number"
@@ -67,7 +78,7 @@ const ContactForm = () => {
                         </div>
 
                         <div className="contract-btn text-center">
-                        <button className="btn" type="submit"> Get A Quote</button>
+                        <button className="btn" type="submit"> Submit</button>
                         </div>
                     </div>
                 </div>

@@ -118,8 +118,7 @@ ul {
 footer li {
   list-style: none;
 }
-ol,
-ul {
+.potsbox_single ol, .potsbox_single  ul {
   padding-left: 1rem;
   font-size: 18px;
   /* padding-right: 10px; */
@@ -1008,6 +1007,10 @@ select.active.focus {
   -webkit-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
   -moz-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
   transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: -28px;
 }
 /* price */
 .pricing-wrapper {
@@ -2751,7 +2754,8 @@ a.btn.btn-subscriptin i {
 }
 /* map */
 .map {
-  min-height: 600px;
+  /* min-height: 600px; */
+  margin-bottom: -6px;
 }
 /* 20. Contact */
 .contact {
@@ -2848,34 +2852,24 @@ a.btn.btn-subscriptin i {
   color: #aab5ca;
 }
 /* contract page */
-.contract-services-box a i:hover {
-  background-image: -moz-linear-gradient(
-    0deg,
-    rgb(0, 77, 205) 0%,
-    rgb(0, 186, 255) 100%
-  );
-  background-image: -webkit-linear-gradient(
-    0deg,
-    rgb(0, 77, 205) 0%,
-    rgb(0, 186, 255) 100%
-  );
-  background-image: -ms-linear-gradient(
-    0deg,
-    rgb(0, 77, 205) 0%,
-    rgb(0, 186, 255) 100%
-  );
-  background-image: linear-gradient(
-    0deg,
-    rgb(0, 77, 205) 0%,
-    rgb(0, 186, 255) 100%
-  );
+.contract-services-box a i {
+  background-image: -moz-linear-gradient(90deg, rgb(89 50 234) 0%, #a342fb 35%, rgba(108, 3, 176, 1) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(89 50 234) 0%, #a342fb 35%, rgba(108, 3, 176, 1) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(89 50 234) 0%, #a342fb 35%, rgba(108, 3, 176, 1) 100%);
+  background-image: linear-gradient(90deg, rgb(89 50 234) 0%, #a342fb 35%, rgba(108, 3, 176, 1) 100%);
   color: #fff;
   border: none;
 }
 .contract-services-box {
   border: 2px solid #ecebff;
   padding: 35px 0;
+  height: 100%;
 }
+
+.contract-services-box i {
+  color: white !important;
+}
+
 .contract-services-box a i {
   width: 118px;
   height: 118px;
@@ -4311,6 +4305,9 @@ article.postbox.post .author {
 .post-meta.mb-15 a,
 .post-meta.mb-15 span {
   font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: unset;
   color: black;
 }
 
@@ -4448,13 +4445,14 @@ section.service-logo-slider {
 }
 
 .icon-service-section .services-content h3 {
-  font-size: 24px;
+  font-size: 21px;
   padding-left: 50px;
   padding-right: 50px;
 }
 
 .icon-service-section .services-box {
   background-color: white;
+  height: 95%;
 }
 
 .skeleton-line,
@@ -5166,7 +5164,7 @@ react-select__control {
 }
 
 .postbox__text.potsbox_single h2 {
-  line-height: 25px !important;
+  line-height: auto  !important;
 }
 
 body {
@@ -5212,4 +5210,40 @@ hr {
 
 .potsbox_single {
   padding: 35px 0px;
+}
+
+
+
+.breadcrumb-menu li, ul.post-tags li {
+  list-style: none;
+}
+
+.breadcrumb-menu , ul.post-tags  {
+  padding-left: 0px;
+}
+
+.post-text h2 {
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+
+.has-dropdown i.fas.fa-chevron-down {
+  position: absolute;
+  right: -10px;
+  top: 42%;
+  color: #5932ea;
+  transition: 200ms all ease-out;
+}
+
+li.has-dropdown {
+  padding-right: 15px;
+}
+
+li.has-dropdown:hover i {
+    rotate: 180deg;
+}
+
+.post-text.mb-20 {
+  text-align: justify;
 }

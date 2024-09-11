@@ -1146,6 +1146,36 @@
   .hector-landing__features--tab-content-header--description {
     font-size: 19px;
   }
+
+  a.mean-expand {
+    margin-left: 20px;
+  }
+  li.has-dropdown {
+    position: relative;
+  }
+  .has-dropdown a.mean-expand {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+  }
+  .has-dropdown i.fas.fa-chevron-down {
+    position: relative;
+    right: unset;
+    top: unset;
+  }
+  a.mean-expand i {
+    rotate: 0deg !important;
+  }
+  a.mean-expand.mean-clicked i {
+    rotate: 180deg !important;
+  }
+  .mean-expand:hover, a.mean-expand {
+    background: transparent;
+  }
+  .offcanvas-body .submenu li {
+    list-style: none;
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: 900px) {

@@ -10,8 +10,9 @@ const ContractArea = () => {
                             <div className="section-title text-center mb-70">
                                 <h2>Get In Touch</h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Grow your E-commerce business with business insights that help you deliver.
+                                    Connect with us to speak to our specialists and understand how Hector
+                                    can help you get higher conversion rates with a lower ACOS.
                                 </p>
                             </div>
                         </div>

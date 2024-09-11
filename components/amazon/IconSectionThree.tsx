@@ -1,9 +1,9 @@
 import Image from "next/image"; 
 import services_data_type from "../types/service-types";
 // service images 
-import service_img_1 from "../../public/assets/img/icon/s01.png";
-import service_img_2 from "../../public/assets/img/icon/s02.png";
-import service_img_3 from "../../public/assets/img/icon/s03.png";
+import service_img_1 from "../../public/assets/img/hector/amazon-marketing-cloud.png";
+import service_img_2 from "../../public/assets/img/hector/rapid-retail-analytics.png";
+import service_img_3 from "../../public/assets/img/hector/amazon-marketing-stream.png";
 // service data 
  const services_data: services_data_type[] = [
     {
